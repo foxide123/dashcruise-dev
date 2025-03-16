@@ -47,3 +47,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.header-custom {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: -2%;
+}
+
+.list-item-custom {
+  font-weight: 500;
+  font-size: 16px;
+}
