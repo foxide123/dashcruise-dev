@@ -5,6 +5,29 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-magenta-100: #E2B6D3; /* pink lavender */
+  --color-magenta-200: #C671AA; /* sky magenta */
+  --color-magenta-300: #953C78; /* violet (crayola) */
+  --color-magenta-400: #4D1F3D; /* brown chocolate */
+  --color-magenta-500: #050204; /* asphalt */
+
+  --color-blur-500: #F9F9FB4D;
+
+  --color-carrot-50: #FEF3E6;
+  --color-carrot-100: #FDE9D3;
+  --color-carrot-200: #FCD4A6;
+  --color-carrot-300: #FABE7A;
+  --color-carrot-400: #F8A749;
+  --color-carrot-500: #F7931E; /* orange like */
+  --color-carrot-600: #D47408;
+  --color-carrot-700: #A25906;
+  --color-carrot-800: #6C3C04;
+
+  --color-vampire-400: #D6D6D6;
+  --color-vampire-500: #545454; /* gray like */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
