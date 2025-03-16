@@ -1,17 +1,24 @@
-<script setup lang="ts">
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faX } from "@fortawesome/free-solid-svg-icons"
+import { IconPropsType, IconSizeEnum } from "@/types/icon_types"
 
-const props = withDefaults(
-  defineProps<{
-    color?: string;
-    size?: string;
-  }>(),
-  {
-    color: "text-carrot-500",
-    size: "text-2xl",
+
+export default function XIcon({
+  color = "text-carrot-500",
+  size = IconSizeEnum.small,
+} : IconPropsType) {
+
+  const iconSizeMap = {
+    [IconSizeEnum.small]: 24,
+    [IconSizeEnum.medium]: 48,
+    [IconSizeEnum.big]: 72
   }
-);
-</script>
 
-<template>
-  <font-awesome-icon :icon="['fas', 'x']" :class="['mr-5', props.size, props.color]" />
-</template>
+  const iconWidth = iconSizeMap[size] ?? 24;
+
+  
+
+  return (
+    <FontAwesomeIcon icon={faX} className={`mr-5 ${color} w-[${iconWidth}px]`} />
+  )
+}

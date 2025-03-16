@@ -1,27 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck } from "@fortawesome/free-solid-svg-icons"
-
-export enum CheckIconSize {
-  small = "small",
-  medium = "medium",
-  big = "big"
-}
-
-interface CheckIconProps {
-  size?: CheckIconSize;
-  color?: string;
-}
+import { IconPropsType, IconSizeEnum } from "@/types/icon_types";
 
 export default function CheckIcon({
-  size = CheckIconSize.small,
+  size = IconSizeEnum.small,
   color = "text-carrot-500"
-} : CheckIconProps) {
+} : IconPropsType) {
 
   //object lookup
   const iconSizeMap = {
-    [CheckIconSize.small]: 24,
-    [CheckIconSize.medium]: 48,
-    [CheckIconSize.big]: 72
+    [IconSizeEnum.small]: 24,
+    [IconSizeEnum.medium]: 48,
+    [IconSizeEnum.big]: 72
   };
 
   const iconWidth = iconSizeMap[size] ?? 24; //default to 24

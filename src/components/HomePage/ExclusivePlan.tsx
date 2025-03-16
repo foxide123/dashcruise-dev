@@ -1,4 +1,5 @@
-import CheckIcon, { CheckIconSize } from "../icons/CheckIcon";
+import CheckIcon from "@/components/icons/CheckIcon";
+import { IconSizeEnum } from "@/types/icon_types"
 
 export default function ExclusivePlan() {
   return (
@@ -14,15 +15,15 @@ export default function ExclusivePlan() {
         </h2>
         <ul className="text-base font-medium leading-6 space-y-4">
           <li>
-            <CheckIcon size={CheckIconSize.small} />
+            <CheckIcon size={IconSizeEnum.small} />
             Boost Your Brand with a Custom Site (1-2 Pages)
           </li>
           <li>
-            <CheckIcon />
+            <CheckIcon size={IconSizeEnum.small}/>
             Mobile and Desktop Version
           </li>
           <li>
-            <CheckIcon />
+            <CheckIcon size={IconSizeEnum.small}/>
             Search Engine Optimization (SEO)
           </li>
         </ul>
