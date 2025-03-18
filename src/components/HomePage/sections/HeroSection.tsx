@@ -1,4 +1,4 @@
-import ExclusivePlan from "./ExclusivePlan";
+import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
 
 export default function HeroSection(){
     return (
