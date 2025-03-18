@@ -1,7 +1,7 @@
 export default function QASection() {
   return (
     <div className="h-[85vh]">
-      <p>Got Questions? We've Got Answers!</p>
+      <p>Got Questions? We&apos;ve Got Answers!</p>
 
       <h3>What security measure do you provide for my website?</h3>
       <p>
@@ -30,7 +30,7 @@ export default function QASection() {
 
       <h3>I have further questions</h3>
       <p>In case you still have further questions,
-      you can click the button "Plan Your Exploration" to schedule a meeting with us. Otherwise you can always contact us by email: abc@gmail.com</p>
+      you can click the button &quot;Plan Your Exploration&quot; to schedule a meeting with us. Otherwise you can always contact us by email: abc@gmail.com</p>
     </div>
   );
 }
