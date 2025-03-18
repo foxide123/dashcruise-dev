@@ -1,7 +1,7 @@
-import ComparisonSection from "@/components/HomePage/ComparisonSection";
-import HeroSection from "@/components/HomePage/HeroSection";
-import PortfolioSection from "@/components/HomePage/PortfolioSection";
-import PricingTable from "@/components/HomePage/PricingTable";
+import ComparisonSection from "@/components/HomePage/sections/ComparisonSection";
+import HeroSection from "@/components/HomePage/sections/HeroSection";
+import PortfolioSection from "@/components/HomePage/sections/PortfolioSection";
+import PricingSection from "@/components/HomePage/sections/PricingSection";
 
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <ComparisonSection />
       <PortfolioSection />
-      <PricingTable />
+      <PricingSection />
     </div>
   );
 }

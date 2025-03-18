@@ -1,6 +1,6 @@
 import CheckIcon from "@/components/icons/CheckIcon";
 import XIcon from "@/components/icons/XIcon";
-"@/"
+
 
 export default function ComparisonSection() {
   return (

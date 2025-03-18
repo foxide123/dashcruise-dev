@@ -7,7 +7,7 @@ export default function ExclusivePlan() {
       <div>
         <h1 className="text-2xl font-medium leading-8 space-y-6">Exclusive Plan</h1>
         <h2 className="text-base font-normal leading-6 space-y-4">
-          Access to the ful suite of advanced functionalities
+          Access to the full suite of advanced functionalities
         </h2>
         <h2 className="text-5xl font-medium leading-15 space-y-12 tracking-tight my-6">
           $49.99{" "}
