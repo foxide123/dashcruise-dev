@@ -1,6 +1,6 @@
 export default function PortfolioSection() {
   return (
-    <div className="lg:text-start lg:px-20 lg:py-10 lg:h-[75vh] text-center w-scren h-[140vh] px-10 py-5">
+    <div className="lg:text-start lg:px-20 lg:py-10 lg:h-[75vh] text-center w-scren px-10 py-5">
       <h2 className="mt-5 text-carrot-500 font-medium text-sm leading-5 my-3.5">Portfolio</h2>
       <h1 className="font-medium text-5xl leading-15 my-6 tracking-tight">See Our Work in Action</h1>
       {/* Highlights Container */}

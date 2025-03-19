@@ -4,7 +4,7 @@ export default function HighlightSection() {
       <div className="lg:px-30 lg:h-[85vh] sm:flex-row flex flex-col w-screen text-white bg-magenta-500 items-center justify-center">
         {/* Boost Your Business */}
         <div className="lg:w-2/3 px-10">
-          <h2 className="font-medium text-carrot-500 text-sm leading-5 my-3.5">
+          <h2 className="md:block hidden font-medium text-carrot-500 text-sm leading-5 my-3.5">
             Features Highlights
           </h2>
           <div className="lg:w-130">

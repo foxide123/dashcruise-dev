@@ -4,10 +4,10 @@ import XIcon from "@/components/icons/XIcon";
 export default function ComparisonSection() {
   return (
     <div className="lg:text-start text-center flex justify-center w-full">
-      <div className="lg:h-[85vh] lg:mb-0 mb-10 w-[70vw] text-black pt-25">
+      <div className="lg:h-[85vh] lg:mb-0 lg:pt-25 mb-10 w-[70vw] text-black">
         {/* Build Faster Section */}
         <div className="">
-          <h3 className="font-medium text-sm leading-5 my-3.5 tracking-normal text-carrot-500">
+          <h3 className="md:block hidden font-medium text-sm leading-5 my-3.5 tracking-normal text-carrot-500">
             Why Choose Us
           </h3>
           <h1 className="header-custom">Build Faster, Rank Higher</h1>
