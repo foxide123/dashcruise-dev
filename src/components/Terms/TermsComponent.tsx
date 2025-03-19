@@ -177,7 +177,7 @@ export default function TermsComponent() {
         Each subscription plan include hosting and domain in the price. We
         (DashCrusie) take the responsibility of the whole development process,
         from purchasing domain, to website design and development, to hosting it
-        and making it accessible over the inernet so you don't have to worry how
+        and making it accessible over the inernet so you don&apos;t have to worry how
         to purchase a domain or host the website. We use Hostinger and
         Cloudflare for purchasing domains and hosting websites.
         <h3>Support</h3>
@@ -208,7 +208,7 @@ export default function TermsComponent() {
           <h4>3.Creating Domain Model (Optional)</h4>
           <p>
             For websites that require data storage - such as blogs or ecommerce
-            stores - a well-designed database is essential. Together we'll
+            stores - a well-designed database is essential. Together we&apos;ll
             develop a model that outlines the key entities and their
             relationships.
           </p>
@@ -255,7 +255,7 @@ export default function TermsComponent() {
           <h4>8.Code updates</h4>
           Web development frameworks evolve over time, requiring periodic
           updates to maintain compatibility and performance. We ensure that your
-          website's code is regularly updated to align with the latest framework
+          website&apos; code is regularly updated to align with the latest framework
           versions and industry standards.
         </div>
       </section>
@@ -347,7 +347,7 @@ export default function TermsComponent() {
         <br />
         <p>
           DashCruise may provide access to third-party tools as part of the
-          service, provided "as is" and "as available" without any warranties.
+          service, provided &quot;as is&quot; and &quot;as available&quot; without any warranties.
         </p>
         <p>
           DashCruise is not liable for any issues arising from the use of these
