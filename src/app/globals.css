@@ -40,6 +40,13 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
 }
 
 body {
@@ -57,13 +64,41 @@ body {
   letter-spacing: -2%;
 }
 
-.list-item-custom {
-  font-weight: 500;
-  font-size: 16px;
-}
-
 .highlight-image-custom {
   width: 200px;
   height: 300px;
   border-radius: 15px;
 }
+
+/* COMPARISON SECTION: START*/
+
+.list-item-custom {
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.list-item-custom div{
+  margin-top: 0px;
+}
+
+.comparison-container-custom{
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-width: 1px;
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .comparison-container-custom{ 
+    width: 34rem;
+    height: 19.5rem;
+    align-items: flex-start;
+  }
+}
+/* END: COMPARISON SECTION*/

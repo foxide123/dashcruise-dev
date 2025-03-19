@@ -13,8 +13,8 @@ export default function Home() {
       <ComparisonSection />
       <HighlightSection />
       <PortfolioSection />
-      <QASection />
-      <PricingSection />
+      {/*<QASection />
+      <PricingSection />*/}
     </div>
   );
 }
