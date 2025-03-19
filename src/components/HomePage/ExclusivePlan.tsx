@@ -10,7 +10,7 @@ export default function ExclusivePlan() {
           Access to the full suite of advanced functionalities
         </h2>
         <h2 className="text-5xl font-medium leading-15 space-y-12 tracking-tight my-6">
-          $49.99{" "}
+          $79{" "}
           <span className="text-2xl space-y-4 font-normal">/&thinsp;month</span>
         </h2>
         <ul className="text-base font-medium leading-6 space-y-4">
