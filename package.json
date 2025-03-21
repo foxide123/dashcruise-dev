@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next-on-pages --experimental-minify",
     "start": "next start",
+    "deploy": "wrangler pages deploy .vercel/output/static",
     "lint": "next lint"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "stripe": "^17.4.0-beta.2"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.10",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/micro-cors": "^0.1.5",
@@ -31,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.3.0"
   }
 }
