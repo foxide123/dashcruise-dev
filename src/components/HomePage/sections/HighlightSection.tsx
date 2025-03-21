@@ -11,7 +11,7 @@ export default function HighlightSection({
         className={`lg:h-[85vh] ${lg_screen_width} sm:flex-row ${default_screen_width} flex flex-col text-white items-center justify-center`}
       >
         {/* Boost Your Business */}
-        <div className="border-2 border-amber-700 lg:w-2/3 px-10">
+        <div className=" lg:w-2/3 px-10">
           <div className="lg:w-130">
             <h1 className="font-medium text-5xl leading-15 my-12 tracking-tight text-center">
               Boost Your Business with <br />

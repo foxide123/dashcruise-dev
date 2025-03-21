@@ -17,7 +17,7 @@ export default function HeroSection({
         {/* Main Hero Section */}
         <div className="lg:justify-around lg:top-1/3 lg:flex-row flex flex-col justify-center items-center w-full">
           {/* Launch Your Site */}
-          <div className="border-2 border-amber-700 text-white">
+          <div className=" text-white">
             <div className="lg:text-7xl my-5 text-4xl lg:leading-15 leading-12 tracking-[-2%] font-bold font-sans text-center">
               <h1>
                 Launch Your Website With Our{" "}

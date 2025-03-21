@@ -11,7 +11,7 @@ export default function ComparisonSection({
   return (
     <div className="lg:text-start text-center flex justify-center w-screen">
       <div
-        className={`border-2 border-amber-700 lg:h-[85vh] ${lg_screen_width} lg:mb-0 lg:pt-25 ${default_screen_width} mb-10 text-black`}
+        className={` lg:h-[85vh] ${lg_screen_width} lg:mb-0 lg:pt-25 ${default_screen_width} mb-10 text-black`}
       >
         {/* Build Faster Section */}
         <div className="">
