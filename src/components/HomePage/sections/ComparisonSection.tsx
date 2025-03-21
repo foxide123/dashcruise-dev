@@ -1,15 +1,20 @@
 import CheckIcon from "@/components/icons/CheckIcon";
 import XIcon from "@/components/icons/XIcon";
 
-export default function ComparisonSection() {
+export default function ComparisonSection({
+  lg_screen_width,
+  default_screen_width
+}: {
+  lg_screen_width: string,
+  default_screen_width: string,
+}) {
   return (
-    <div className="lg:text-start text-center flex justify-center w-full">
-      <div className="lg:h-[85vh] lg:mb-0 lg:pt-25 mb-10 w-[70vw] text-black">
+    <div className="lg:text-start text-center flex justify-center w-screen">
+      <div
+        className={`border-2 border-amber-700 lg:h-[85vh] ${lg_screen_width} lg:mb-0 lg:pt-25 ${default_screen_width} mb-10 text-black`}
+      >
         {/* Build Faster Section */}
         <div className="">
-          <h3 className="md:block hidden font-medium text-sm leading-5 my-3.5 tracking-normal text-carrot-500">
-            Why Choose Us
-          </h3>
           <h1 className="header-custom">Build Faster, Rank Higher</h1>
           <h1 className="header-custom">Stand Out from Crowd</h1>
         </div>

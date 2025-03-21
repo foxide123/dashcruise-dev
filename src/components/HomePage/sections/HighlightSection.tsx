@@ -1,12 +1,17 @@
-export default function HighlightSection() {
+export default function HighlightSection({
+  lg_screen_width,
+  default_screen_width
+}: {
+  lg_screen_width: string;
+  default_screen_width: string;
+}) {
   return (
-    <div className="lg:text-start text-center flex justify-center w-full">
-      <div className="lg:px-30 lg:h-[85vh] sm:flex-row flex flex-col w-screen text-white bg-magenta-500 items-center justify-center">
+    <div className="lg:text-start text-center flex justify-center bg-magenta-500  w-screen">
+      <div
+        className={`lg:h-[85vh] ${lg_screen_width} sm:flex-row ${default_screen_width} flex flex-col text-white items-center justify-center`}
+      >
         {/* Boost Your Business */}
-        <div className="lg:w-2/3 px-10">
-          <h2 className="md:block hidden font-medium text-carrot-500 text-sm leading-5 my-3.5">
-            Features Highlights
-          </h2>
+        <div className="border-2 border-amber-700 lg:w-2/3 px-10">
           <div className="lg:w-130">
             <h1 className="font-medium text-5xl leading-15 my-12 tracking-tight text-center">
               Boost Your Business with <br />
@@ -21,10 +26,13 @@ export default function HighlightSection() {
               presence with us - where speed meets security!
             </p>
           </div>
-          <img src="/Cloudflare_Logo.png" className="lg:mx-0 lg:mb-0 w-[200px] mb-10 mx-auto"/>
+          <img
+            src="/Cloudflare_Logo.png"
+            className="lg:mx-0 lg:mb-0 w-[200px] mb-10 mx-auto"
+          />
         </div>
         {/* Highlight Images */}
-        <div className="md:w-1/3 md:flex md:flex-row md:h-full md:py-22 hidden">
+        <div className="border-2 border-amber-700 md:w-1/3 md:flex md:flex-row md:h-full md:py-22 hidden">
           <div className="mr-8 self-end">
             <div className="highlight-image-custom bg-[url(/coding.jpg)]"></div>
             <div className="mt-6 highlight-image-custom bg-[url(/coding_2.jpg)]"></div>
