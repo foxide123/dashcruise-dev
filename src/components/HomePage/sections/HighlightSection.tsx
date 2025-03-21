@@ -32,7 +32,7 @@ export default function HighlightSection({
           />
         </div>
         {/* Highlight Images */}
-        <div className="border-2 border-amber-700 md:w-1/3 md:flex md:flex-row md:h-full md:py-22 hidden">
+        <div className="md:w-1/3 md:flex md:flex-row md:h-full md:py-22 hidden">
           <div className="mr-8 self-end">
             <div className="highlight-image-custom bg-[url(/coding.jpg)]"></div>
             <div className="mt-6 highlight-image-custom bg-[url(/coding_2.jpg)]"></div>
