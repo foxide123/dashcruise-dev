@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY! as string, {
+  // eslint-disable-next-line
   apiVersion: "2025-02-24.acacia; custom_checkout_beta=v1" as any,
 });
 
@@ -43,8 +44,8 @@ export async function POST(req: Request) {
     const checkoutSession: Stripe.Checkout.Session =
       await stripe.checkout.sessions.create(params);
     return NextResponse.json({sessionId: checkoutSession.id}, {status:200})
-  } catch (error: any) {
+  } catch (error) {
     console.log(error);
-    return NextResponse.json({error: error.message}, {status: 500});
+    return NextResponse.json({error: error instanceof Error ? error.message : error}, {status: 500});
   }
 }

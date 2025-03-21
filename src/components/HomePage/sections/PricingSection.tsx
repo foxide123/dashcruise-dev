@@ -4,7 +4,7 @@ import SubscribeButton from "@/components/SubscribeButton";
 
 export default function PricingSection({
   lg_screen_width,
-  default_screen_width
+  default_screen_width,
 }: {
   lg_screen_width: string;
   default_screen_width: string;
@@ -21,7 +21,9 @@ export default function PricingSection({
       </div>
 
       {/* Available Plans */}
-      <div className={`lg:flex-row ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}>
+      <div
+        className={`lg:flex-row ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
+      >
         {/* Basic Plan */}
         <div className="lg:order-1 lg:mt-0 lg:flex-none xl:w-2/5 lg:h-full sm:w-2/3 flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400">
           {/* Blogger, Icon, Price per Month and Bottom Border */}
@@ -121,7 +123,7 @@ export default function PricingSection({
             <span className="text-3xl font-bold text-white">19 </span>
             <p className="inline-block text-gray-100">per additional page</p>
           </div>
-          <SubscribeButton />
+          <SubscribeButton customAmount="79" />
         </div>
       </div>
 
@@ -130,7 +132,7 @@ export default function PricingSection({
         <a
           target="_blank"
           href="https://calendar.app.google/nJ81vUocCXJ48TsN7"
-          className="cursor-pointer no-underline bg-carrot-600 rounded-xl flex items-center justify-center py-10"
+          className="cursor-pointer no-underline bg-carrot-600 rounded-xl rounded-b-none flex items-center justify-center py-10"
         >
           <p className="text-white text-2xl w-1/2 font-semibold">
             Schedule a Meeting with Us to Discuss the Details
@@ -140,6 +142,15 @@ export default function PricingSection({
             <img src="/calendar-solid.svg" width={50} className="mt-10" />
           </div>
         </a>
+        <div className="rounded-xl bg-carrot-300 rounded-t-none">
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3u-YV1VLjT9bkgJT5nEX6x--Kq1tutrBI7PzD65l5zD7gfdvKtF78Agw21T-OmC0VErkOQd8wD?gv=true"
+          className="border-0"
+          width="100%"
+          height="600"
+          frameBorder="0"
+        ></iframe>
+      </div>
       </div>
       {/* Blogger Plan 
         <div className="lg:w-full p-8 sm:w-96 w-full flex-1 order-2 bg-white shadow-xl rounded-3xl">

@@ -1,40 +1,53 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
+import { NextResponse } from "next/server";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
+);
 
-export default function SubscribeButton(){
-    const [loading, setLoading] = useState(false);
+export default function SubscribeButton({
+  customAmount,
+}: {
+  customAmount: string;
+}) {
 
-    const handleCheckout = async () => {
-        setLoading(false);
+  const [loading, setLoading] = useState(false);
 
-        try{
-            const response = await fetch('/api/checkout_sessions', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json'},
-                body: JSON.stringify({amount: 49}),
-            });
+  const handleCheckout = async () => {
+    setLoading(true);
 
-            const { sessionId } = await response.json();
-            const stripe = await stripePromise;
+    try {
+      const response = await fetch("/api/checkout_sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: customAmount }),
+      });
 
-            if(stripe){
-                stripe.redirectToCheckout({sessionId});
-            }
-        }catch(error){
-            console.error("Error redirecting to Stripe:", error);
-        }
-        setLoading(false);
-    };
+      const data = await response.json();
 
-    return (
-        <button
-            onClick={handleCheckout}
-            disabled={loading}
-            className="flex justify-center items-center bg-carrot-500 rounded-xl py-6 px-4 text-center text-white text-2xl w-full cursor-pointer">
-            {loading ? 'Processing...' : 'Subscribe'}
-        </button>
-    )
+      if (response.status !== 200 || !data.sessionId) {
+        console.error("Error creating session:", data);
+        return;
+      }
+
+      const stripe = await stripePromise;
+      await stripe?.redirectToCheckout({ sessionId: data.sessionId });
+
+    } catch (error) {
+        NextResponse.json({error: error instanceof Error ? error.message : error});
+    }
+    setLoading(false);
+  };
+
+  return (
+    <button
+      onClick={handleCheckout}
+      disabled={loading}
+      className="flex justify-center items-center bg-carrot-500 rounded-xl py-6 px-4 text-center text-white text-2xl w-full cursor-pointer"
+    >
+      {loading ? "Processing..." : "Subscribe"}
+    </button>
+  );
 }
