@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY! as string, {
@@ -13,18 +13,26 @@ const formatAmountForStripe = (amount: number, currency: string) => {
   return Math.round(amount * 100);
 };
 
-export async function POST(req: Request) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).end("Method Not Allowed");
+  }
 
   try {
-    const { amount } = await req.json();
+    const { amount } = req.body;
 
     if (!amount || amount < 1) {
-      return NextResponse.json({ error: "Invalid amount" }, {status: 400});
+      return res.status(400).json({ error: "Invalid amount" });
     }
-  
-    const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://dashcruisedev.com" || "http://localhost:3000";
 
-    const params: Stripe.Checkout.SessionCreateParams = {
+    const origin =
+      process.env.NEXT_PUBLIC_SITE_URL || "https://dashcruisedev.com";
+
+    const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       payment_method_types: ["card"],
       line_items: [
@@ -34,7 +42,7 @@ export async function POST(req: Request) {
             currency: CURRENCY,
             product_data: { name: "Website Plan" },
             recurring: {
-              interval: 'month',
+              interval: "month",
             },
             unit_amount: formatAmountForStripe(amount, CURRENCY),
           },
@@ -42,12 +50,10 @@ export async function POST(req: Request) {
       ],
       success_url: `${origin}/result?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}`,
-    };
-    const checkoutSession: Stripe.Checkout.Session =
-      await stripe.checkout.sessions.create(params);
-    return NextResponse.json({sessionId: checkoutSession.id}, {status:200})
+    });
+
+    res.status(200).json({ sessionId: session.id });
   } catch (error) {
-    console.log(error);
-    return NextResponse.json({error: error instanceof Error ? error.message : error}, {status: 500});
+    res.status(500).json({ error: error instanceof Error ? error.message : error });
   }
 }
