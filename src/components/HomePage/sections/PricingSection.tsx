@@ -42,7 +42,7 @@ export default function PricingSection({
                   <span className="font-medium text-gray-100 text-xl align-top">
                     $&thinsp;
                   </span>
-                  <span className="text-3xl font-bold text-white">49 </span>
+                  <span className="text-3xl font-bold text-white">79 </span>
                 </span>
                 <span className="text-gray-100 font-medium">/ month</span>
               </div>

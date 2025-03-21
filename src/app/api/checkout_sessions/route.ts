@@ -22,6 +22,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid amount" }, {status: 400});
     }
   
+    const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://dashcruisedev.com" || "http://localhost:3000";
+
     const params: Stripe.Checkout.SessionCreateParams = {
       mode: "subscription",
       payment_method_types: ["card"],
@@ -38,8 +40,8 @@ export async function POST(req: Request) {
           },
         },
       ],
-      success_url: `${req.headers.get("origin")}/result?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.get("origin")}`,
+      success_url: `${origin}/result?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}`,
     };
     const checkoutSession: Stripe.Checkout.Session =
       await stripe.checkout.sessions.create(params);
