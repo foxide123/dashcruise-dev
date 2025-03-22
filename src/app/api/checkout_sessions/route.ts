@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     const { amount } = (await req.json()) as CheckoutApiRequest;
 
-    const res = await fetch("https://stripe-wrangler.kuba-kolando-02-01.workers.dev", {
+    const res = await fetch("https://api.dashcruisedev.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
