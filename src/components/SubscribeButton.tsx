@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { NextResponse } from "next/server";
+import { CheckoutApiResponse } from "@/types/api_types";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
-
 export default function SubscribeButton({
   customAmount,
 }: {
@@ -25,7 +25,7 @@ export default function SubscribeButton({
         body: JSON.stringify({ amount: customAmount }),
       });
 
-      const data = await response.json();
+      const data = (await response.json()) as CheckoutApiResponse;
 
       if (response.status !== 200 || !data.sessionId) {
         console.error("Error creating session:", data);

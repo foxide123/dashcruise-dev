@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import ComparisonSection from "@/components/HomePage/sections/ComparisonSection";
 import HeroSection from "@/components/HomePage/sections/HeroSection";
 import HighlightSection from "@/components/HomePage/sections/HighlightSection";

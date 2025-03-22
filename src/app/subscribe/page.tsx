@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import SubscribeButton from "@/components/SubscribeButton";
 
 export default function Subscribe() {
