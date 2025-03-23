@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { NextResponse } from "next/server";
 import { CheckoutApiResponse } from "@/types/api_types";
+import { useRouter } from "next/navigation";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
@@ -14,6 +15,11 @@ export default function SubscribeButton({
 }) {
 
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    setLoading(false); // Reset on mount
+  }, [router]);
 
   const handleCheckout = async () => {
     setLoading(true);
@@ -34,9 +40,10 @@ export default function SubscribeButton({
 
       const stripe = await stripePromise;
       await stripe?.redirectToCheckout({ sessionId: data.sessionId });
-
     } catch (error) {
-        NextResponse.json({error: error instanceof Error ? error.message : error});
+      NextResponse.json({
+        error: error instanceof Error ? error.message : error,
+      });
     }
     setLoading(false);
   };
