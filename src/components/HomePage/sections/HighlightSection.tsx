@@ -8,7 +8,7 @@ export default function HighlightSection({
   return (
     <div className="lg:text-start text-center flex justify-center bg-magenta-500  w-screen">
       <div
-        className={`lg:h-[85vh] ${lg_screen_width} sm:flex-row ${default_screen_width} flex flex-col text-white items-center justify-center`}
+        className={` ${lg_screen_width} sm:flex-row ${default_screen_width} flex flex-col text-white items-center justify-center`}
       >
         {/* Boost Your Business */}
         <div className=" lg:w-2/3 px-10">

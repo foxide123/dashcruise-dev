@@ -1,6 +1,7 @@
 "use client";
 
 import SubscribeButton from "@/components/SubscribeButton";
+import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
 
 export default function PricingSection({
   lg_screen_width,
@@ -127,31 +128,10 @@ export default function PricingSection({
         </div>
       </div>
 
-      <div style={{ maxWidth: "max-content" }} className="text-center mx-auto">
-        <p className="my-5 text-2xl font-bold">OR</p>
-        <a
-          target="_blank"
-          href="https://calendar.app.google/nJ81vUocCXJ48TsN7"
-          className="cursor-pointer no-underline bg-carrot-600 rounded-xl rounded-b-none flex items-center justify-center py-10"
-        >
-          <p className="text-white text-2xl w-1/2 font-semibold">
-            Schedule a Meeting with Us to Discuss the Details
-          </p>
-          <div className="flex-col ml-5 h-full">
-            <img src="headset-solid.svg" width={50} className="mb-10" />
-            <img src="/calendar-solid.svg" width={50} className="mt-10" />
-          </div>
-        </a>
-        <div className="rounded-xl bg-carrot-300 rounded-t-none">
-        <iframe
-          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3u-YV1VLjT9bkgJT5nEX6x--Kq1tutrBI7PzD65l5zD7gfdvKtF78Agw21T-OmC0VErkOQd8wD?gv=true"
-          className="border-0"
-          width="100%"
-          height="600"
-          frameBorder="0"
-        ></iframe>
-      </div>
-      </div>
+      <p className="my-5 text-2xl font-bold">OR</p>
+
+      <MeetingSchedule />
+
       {/* Blogger Plan 
         <div className="lg:w-full p-8 sm:w-96 w-full flex-1 order-2 bg-white shadow-xl rounded-3xl">
            Basic Plan icon, price and summary (above bottom border) 

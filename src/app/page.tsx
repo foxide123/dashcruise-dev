@@ -3,7 +3,7 @@ import HeroSection from "@/components/HomePage/sections/HeroSection";
 import HighlightSection from "@/components/HomePage/sections/HighlightSection";
 import PricingSection from "@/components/HomePage/sections/PricingSection";
 import QASection from "@/components/HomePage/sections/QASection";
-import CookieBanner from "@/components/CookieBanner";
+import ContactUsSection from "@/components/HomePage/sections/ContactUsSection";
 
 export default function Home() {
   return (
@@ -32,8 +32,12 @@ export default function Home() {
         lg_screen_width="lg:w-[85vw]"
         default_screen_width="w-[85vw]"
       />
+      <ContactUsSection
+        lg_screen_width="lg:w-[85vw]"
+        default_screen_width="w-[85vw]"
+      />
 
-      <CookieBanner debug={true}/>
+    {/*  <CookieBanner />*/}
     </div>
   );
 }

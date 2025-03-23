@@ -11,7 +11,7 @@ export default function ComparisonSection({
   return (
     <div className="lg:text-start text-center flex justify-center w-screen">
       <div
-        className={` lg:h-[85vh] ${lg_screen_width} lg:mb-0 lg:pt-25 ${default_screen_width} mb-10 text-black`}
+        className={` ${lg_screen_width} lg:mb-0 lg:py-25 ${default_screen_width} mb-10 text-black`}
       >
         {/* Build Faster Section */}
         <div className="">
@@ -24,7 +24,7 @@ export default function ComparisonSection({
           services. From design and development to manufacturing.
         </p>
         {/* LandingPageDev and WordPress container */}
-        <div className="lg:flex-row flex flex-col justify-between w-full overflow-hidden">
+        <div className="lg:flex-row items-center flex flex-col justify-between w-full overflow-hidden">
           {/* LandingPageDev container */}
           <div className="comparison-container-custom border-magenta-300">
             <div>
@@ -72,7 +72,7 @@ export default function ComparisonSection({
             </ul>
           </div>
           {/* WordPress container */}
-          <div className="comparison-container-custom border-vampire-400 mt-5">
+          <div className="lg:mt-0 comparison-container-custom border-vampire-400 mt-5">
             <div>
               <h2 className="font-medium text-2xl leading-8 my-6">WordPress</h2>
             </div>

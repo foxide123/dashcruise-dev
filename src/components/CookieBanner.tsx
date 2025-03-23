@@ -1,7 +1,7 @@
 "use client";
 import { useConsent } from "@/context/ConsentContext";
 
-export default function CookieBanner({ debug }: { debug: boolean }) {
+export default function CookieBanner() {
   const { consent, setConsent, isReady } = useConsent();
 
   if (!isReady) return null;
