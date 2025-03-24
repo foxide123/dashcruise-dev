@@ -24,6 +24,7 @@
     "node": "^20.19.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "resend": "^4.1.2",
     "stripe": "^17.4.0-beta.2"
   },
   "devDependencies": {

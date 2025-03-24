@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { CheckoutApiRequest } from "@/types/api_types";
+import { CheckoutApiRequest, CheckoutApiResponse } from "@/types/api_types";
 
 export const runtime = "edge";
 
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error }, { status: res.status });
     }
   
-    const { sessionId } = await res.json();   
+    const { sessionId } = (await res.json()) as CheckoutApiResponse;   
     return NextResponse.json({ sessionId: sessionId });
   } catch (error) {
     return NextResponse.json({
