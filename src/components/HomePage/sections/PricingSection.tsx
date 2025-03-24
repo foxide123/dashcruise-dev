@@ -1,7 +1,8 @@
 "use client";
 
-import SubscribeButton from "@/components/SubscribeButton";
 import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
+import PricingPlan from "../PricingPlan";
+import { pricingPlans } from "../../../data/pricingData";
 
 export default function PricingSection({
   lg_screen_width,
@@ -10,8 +11,22 @@ export default function PricingSection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
+  const pricingComponents = pricingPlans.map((plan, index) => (
+    <PricingPlan
+      key={index}
+      planName={plan.name}
+      planPrice={plan.price}
+      planDescription={plan.description}
+      additionalPagePrice={plan.additionalPagePrice}
+      features={plan.features}
+      bgColor={plan.bgColor}
+      textPrimaryColor={plan.textPrimaryColor}
+      textSecondaryColor={plan.textSecondaryColor}
+    />
+  ));
+
   return (
-    <div className="flex flex-col items-center lg:max-w-screen lg:px-30 max-w-6xl mx-auto pt-10 pb-36 px-8 bg-amber-200">
+    <div className="lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8 bg-amber-200">
       <div className="max-w-md mx-auto mb-14 text-center">
         <h1 className="text-4xl font-semibold mb-6 lg:text-5xl">
           <span className="text-black">Flexible</span> Plans
@@ -23,109 +38,9 @@ export default function PricingSection({
 
       {/* Available Plans */}
       <div
-        className={`lg:flex-row ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
+        className={`lg:flex-row lg:justify-around ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
       >
-        {/* Basic Plan */}
-        <div className="lg:order-1 lg:mt-0 lg:flex-none xl:w-2/5 lg:h-full sm:w-2/3 flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400">
-          {/* Blogger, Icon, Price per Month and Bottom Border */}
-          <div className="mb-7 pb-5 flex-col items-center border-b border-gray-300">
-            <div className="flex flex-row items-center">
-              <img
-                src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"
-                alt=""
-                className="rounded-3xl w-20 h-20"
-              />
-              <div className="ml-5">
-                <span className="block text-2xl font-semibold text-white">
-                  🔥 Basic
-                </span>
-                <span>
-                  <span className="font-medium text-gray-100 text-xl align-top">
-                    $&thinsp;
-                  </span>
-                  <span className="text-3xl font-bold text-white">79 </span>
-                </span>
-                <span className="text-gray-100 font-medium">/ month</span>
-              </div>
-            </div>
-            <p className="text-center mt-5 mb-2 text-white">
-              Perfect for Startups, Freelancers and Anyone Looking for a
-              Professional Online Presence
-            </p>
-          </div>
-
-          <ul className="mb-10 font-medium text-xl">
-            <li className="flex text-lg mb-2 items-start">
-              <img
-                className="mt-1"
-                src="https://res.cloudinary.com/williamsondesign/check-white.svg"
-              />
-              <span className="ml-3">
-                <span className="text-white font-semibold text-xl">
-                  1-Page Custom Website
-                </span>
-                <p>Responsive & Mobile Friendly</p>
-              </span>
-            </li>
-            <li className="flex  text-lg mb-2 items-start">
-              <img
-                className="mt-1"
-                src="https://res.cloudinary.com/williamsondesign/check-white.svg"
-              />
-              <span className="ml-3">
-                <span className="text-white font-semibold text-xl">
-                  SEO Optimization
-                </span>
-                <p>Fast Indexing, Keyword Research</p>
-              </span>
-            </li>
-            <li className="flex  text-lg mb-2 items-start">
-              <img
-                className="mt-1"
-                src="https://res.cloudinary.com/williamsondesign/check-white.svg"
-              />
-              <span className="ml-3">
-                <span className="text-white font-semibold text-xl">
-                  Unlimited Edits
-                </span>
-                <p>For design & content updates</p>
-              </span>
-            </li>
-            <li className="flex  text-lg mb-2 items-start">
-              <img
-                className="mt-1"
-                src="https://res.cloudinary.com/williamsondesign/check-white.svg"
-              />
-              <span className="ml-3">
-                <span className="text-white font-semibold text-xl">
-                  Fast Delivery
-                </span>
-                <p>Launch within days</p>
-              </span>
-            </li>
-            <li className="flex  text-lg mb-2 items-start">
-              <img
-                className="mt-1"
-                src="https://res.cloudinary.com/williamsondesign/check-white.svg"
-              />
-              <span className="ml-3">
-                <span className="text-white font-semibold text-xl">
-                  Hosting & Domain & SSL Included
-                </span>
-                <p>Secure and Reliable Hosting and Domain</p>
-              </span>
-            </li>
-          </ul>
-          <div className="border-gray-300 border-y py-5 mb-5 text-center">
-            <h2 className="font-semibold text-white">Need More Pages?</h2>
-            <span className="font-medium text-gray-100 text-xl align-top">
-              $&thinsp;
-            </span>
-            <span className="text-3xl font-bold text-white">19 </span>
-            <p className="inline-block text-gray-100">per additional page</p>
-          </div>
-          <SubscribeButton customAmount="79" />
-        </div>
+        {pricingComponents}
       </div>
 
       <p className="my-5 text-2xl font-bold">OR</p>

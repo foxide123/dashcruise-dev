@@ -4,7 +4,8 @@ import { IconPropsType, IconSizeEnum } from "@/types/icon_types";
 
 export default function CheckIcon({
   size = IconSizeEnum.small,
-  color = "text-carrot-500"
+  color = "text-carrot-500",
+  marginTop = "0"
 } : IconPropsType) {
 
   //object lookup
@@ -17,6 +18,6 @@ export default function CheckIcon({
   const iconWidth = iconSizeMap[size] ?? 24; //default to 24
 
   return (
-    <FontAwesomeIcon icon={faCheck} className={`mr-5 ${color} w-[${iconWidth}px]`} />
+    <FontAwesomeIcon icon={faCheck} className={`mr-5 ${color} w-[${iconWidth}px] mt-${marginTop}`} />
   )
 }

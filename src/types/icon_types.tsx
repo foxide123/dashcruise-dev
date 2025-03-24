@@ -7,4 +7,5 @@ export enum IconSizeEnum {
 export type IconPropsType = {
   size?: IconSizeEnum;
   color?: string;
+  marginTop?:string;
 };
