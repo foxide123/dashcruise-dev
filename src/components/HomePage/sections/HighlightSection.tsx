@@ -14,7 +14,7 @@ export default function HighlightSection({
       >
         {/* Boost Your Business */}
         <div className="flex-col lg:px-0 lg:w-2/3 px-10">
-          <div className="lg:w-130">
+          <div className="lg:w-[520px]">
             <h1 className="font-medium text-5xl leading-15 my-12 tracking-tight text-center">
               Boost Your Business with <br />
               Unmatched Speed and <br />
