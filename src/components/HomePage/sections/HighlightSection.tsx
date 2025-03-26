@@ -6,12 +6,12 @@ export default function HighlightSection({
   default_screen_width: string;
 }) {
   return (
-    <div className="lg:text-start text-center flex justify-center bg-magenta-500  w-screen">
+    <div className="xl:text-start lg:text-center text-center flex flex-row justify-center bg-magenta-500  w-screen">
       <div
-        className={` ${lg_screen_width} sm:flex-row ${default_screen_width} flex flex-col text-white items-center justify-center`}
+        className={`lg:justify-between ${lg_screen_width} lg:py-0 lg:flex-row ${default_screen_width} flex flex-col py-10 text-white items-center justify-center`}
       >
         {/* Boost Your Business */}
-        <div className=" lg:w-2/3 px-10">
+        <div className="flex-col lg:px-0 lg:w-2/3 px-10">
           <div className="lg:w-130">
             <h1 className="font-medium text-5xl leading-15 my-12 tracking-tight text-center">
               Boost Your Business with <br />
@@ -32,12 +32,12 @@ export default function HighlightSection({
           />
         </div>
         {/* Highlight Images */}
-        <div className="md:w-1/3 md:flex md:flex-row md:h-full md:py-22 hidden">
+        <div className="xl:flex xl:flex-row mlg:h-full lg:py-22 hidden">
           <div className="mr-8 self-end">
             <div className="highlight-image-custom bg-[url(/coding.jpg)]"></div>
             <div className="mt-6 highlight-image-custom bg-[url(/coding_2.jpg)]"></div>
           </div>
-          <div className="">
+          <div className="self-start">
             <div className="highlight-image-custom bg-[url(/hardware.webp)]"></div>
             <div className="highlight-image-custom bg-[url(/programmer.webp)]"></div>
           </div>

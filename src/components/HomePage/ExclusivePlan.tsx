@@ -4,7 +4,7 @@ import SubscribeButton from "../SubscribeButton";
 
 export default function ExclusivePlan() {
   return (
-    <div className="lg:w-136 lg:h-102 lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
+    <div className="lg:w-140 lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
       <div>
         <h1 className="text-2xl font-medium leading-8 space-y-6">
           Exclusive Plan
@@ -13,7 +13,7 @@ export default function ExclusivePlan() {
           Access to the full suite of advanced functionalities
         </h2>
         <h2 className="text-5xl font-medium leading-15 space-y-12 tracking-tight my-6">
-          $&thinsp;79{" "}
+        €&thinsp;49{" "}
           <span className="text-2xl space-y-4 font-normal">/&thinsp;month</span>
         </h2>
         <ul className="text-base font-medium leading-6 space-y-4">
@@ -27,11 +27,15 @@ export default function ExclusivePlan() {
           </li>
           <li>
             <CheckIcon size={IconSizeEnum.small} />
-            Search Engine Optimization (SEO)
+            Search Engine Optimization (SEO) 
+          </li>
+          <li>
+            <CheckIcon size={IconSizeEnum.small} />
+            Hosting & Domain & Business Email
           </li>
         </ul>
         <div className="mt-10">
-          <SubscribeButton customAmount="79"/>
+          <SubscribeButton customAmount="49"/>
         </div>
       </div>
     </div>

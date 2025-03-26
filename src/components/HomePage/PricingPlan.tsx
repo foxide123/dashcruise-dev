@@ -54,7 +54,7 @@ export default function PricingPlan({
             </span>
             <span>
               <span className="font-medium text-xl align-top">
-                $&thinsp;
+              €&thinsp;
               </span>
               <span className="text-3xl font-bold">{planPrice}</span>
             </span>
@@ -72,7 +72,7 @@ export default function PricingPlan({
       <div className={` ${additionalPagePrice ? "block" : "hidden"} border-${textSecondaryColor} text-${textPrimaryColor} border-y py-5 mb-5 text-center`}>
         <h2 className="font-semibold">Need More Pages?</h2>
         <span className="font-medium text-xl align-top">
-          $&thinsp;
+        €&thinsp;
         </span>
         <span className="text-3xl font-bold">{additionalPagePrice} / month </span>
         <p className="inline-block">per additional page</p>

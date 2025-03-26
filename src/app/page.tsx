@@ -17,7 +17,7 @@ export default function Home() {
         default_screen_width="w-[85vw]"
       />
       <HighlightSection
-        lg_screen_width="lg:w-[85vw]"
+        lg_screen_width="lg:w-[75vw]"
         default_screen_width="w-[85vw]"
       />
      {/* <PortfolioSection
@@ -29,7 +29,7 @@ export default function Home() {
         default_screen_width="w-[85vw]"
       />
       <PricingSection
-        lg_screen_width="lg:w-[85vw]"
+        lg_screen_width="lg:w-[75vw]"
         default_screen_width="w-[85vw]"
       />
       <ContactUsSection
