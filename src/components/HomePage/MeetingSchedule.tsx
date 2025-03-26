@@ -29,6 +29,7 @@ export default function MeetingSchedule() {
           width="100%"
           height="600"
           loading="lazy"
+          title="Schedule Google Meeting"
           frameBorder="0"
         ></iframe>
 

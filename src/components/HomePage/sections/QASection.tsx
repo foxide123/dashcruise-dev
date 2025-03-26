@@ -64,7 +64,7 @@ export default function QASection({
                 className="flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="font-medium text-xl">{faq.question}</h3>
+                <h2 className="font-medium text-xl">{faq.question}</h2>
                 <span className="text-gray-500 text-2xl">
                   {openQuestion === index ? "−" : "+"}
                 </span>
