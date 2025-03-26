@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { NextResponse } from "next/server";
 import { SubmitFormApiResponse } from "@/types/api_types";
 
 const schema = z.object({
@@ -41,8 +40,9 @@ export async function handleFormSubmition(formData: FormData) {
       return;
     }
 
-    NextResponse.json({success: ""})
+    return {success: true};
   } catch (error) {
     console.error("Submission error:", error);
+    return {error: "Server error", details: error};
   }
 }
