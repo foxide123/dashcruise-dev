@@ -1,9 +1,11 @@
-import ComparisonSection from "@/components/HomePage/sections/ComparisonSection";
-import HeroSection from "@/components/HomePage/sections/HeroSection";
-import HighlightSection from "@/components/HomePage/sections/HighlightSection";
-import PricingSection from "@/components/HomePage/sections/PricingSection";
-import QASection from "@/components/HomePage/sections/QASection";
-import ContactUsSection from "@/components/HomePage/sections/ContactUsSection";
+import dynamic from "next/dynamic";
+
+const ComparisonSection = dynamic(()=> import("@/components/HomePage/sections/ComparisonSection"));
+const HeroSection = dynamic(() => import("@/components/HomePage/sections/HeroSection"));
+const HighlightSection = dynamic(() => import("@/components/HomePage/sections/HighlightSection"));
+const PricingSection = dynamic(()=> import("@/components/HomePage/sections/PricingSection"));
+const QASection = dynamic(() => import("@/components/HomePage/sections/QASection"));
+const ContactUsSection = dynamic(()=> import("@/components/HomePage/sections/ContactUsSection"))
 
 export default function Home() {
   return (

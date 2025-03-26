@@ -21,10 +21,10 @@ export default function HeroSection({
           {/* Launch Your Site */}
           <div className=" text-white">
             <Image
-              src="/dashcruise_logo_edited.png"
+              src="/dashcruise_logo_edited_w_280.png"
               sizes="280px"
-              width={288}
-              height={288}
+              width={280}
+              height={280}
               alt="logo"
               priority
               className="lg:mt-0 bg-blue-50 p-10 rounded-2xl mx-auto mt-5"
