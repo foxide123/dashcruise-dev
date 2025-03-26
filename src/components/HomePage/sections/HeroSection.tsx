@@ -1,5 +1,8 @@
-import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
+'use client'
+
 import Image from "next/image";
+import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
+
 
 export default function HeroSection({
   lg_screen_width,

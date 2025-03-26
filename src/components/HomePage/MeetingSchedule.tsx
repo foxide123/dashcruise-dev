@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 export default function MeetingSchedule() {
@@ -6,7 +8,7 @@ export default function MeetingSchedule() {
     <div style={{ maxWidth: "max-content" }} className="text-center mx-auto">
       <a
         target="_blank"
-        href="https://calendar.app.google/jF5PcD3K141rRSLfA"
+        href="https://calendar.app.google/q3B2rkBJtAgUdwLR6"
         className="cursor-pointer no-underline bg-carrot-600 rounded-xl rounded-b-none flex items-center justify-center py-10"
       >
         <p className="text-white text-2xl w-1/2 font-semibold">
@@ -24,7 +26,7 @@ export default function MeetingSchedule() {
       <div className="rounded-xl bg-carrot-300 rounded-t-none">
 
         <iframe
-          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0CqzcZ5pNy_9u4K3NdH6P_WmHMTedfoaJUGEOrAU0OIVLCzCVtPqlpRhxPcPDM3uy6N7bwfr9h?gv=true"
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ts-5A-akJnclu6mwaWaqGKpGVy9SsseHM5ZrAEZf9VW-67BHmKht6l5R5aH0QkAsqCUmuQ13R?gv=true"
           className="border-0"
           width="100%"
           height="600"

@@ -1,3 +1,5 @@
+'use client'
+
 import CheckIcon from "../icons/CheckIcon";
 import SubscribeButton from "../SubscribeButton";
 import Image from "next/image";

@@ -1,3 +1,5 @@
+'use client'
+
 import "./terms.css";
 
 export default function TermsComponent() {

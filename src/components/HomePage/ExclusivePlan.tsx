@@ -1,6 +1,9 @@
-import CheckIcon from "@/components/icons/CheckIcon";
+'use client'
+
 import { IconSizeEnum } from "@/types/icon_types";
-import SubscribeButton from "../SubscribeButton";
+import dynamic from "next/dynamic";
+const SubscribeButton = dynamic(() => import("@/components/SubscribeButton"))
+const CheckIcon = dynamic(() => import("@/components/icons/CheckIcon"));
 
 export default function ExclusivePlan() {
   return (
