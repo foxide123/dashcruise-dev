@@ -27,6 +27,7 @@ export default function HeroSection({
               height={280}
               alt="logo"
               priority
+              fetchPriority="high"
               className="lg:mt-0 bg-blue-50 p-10 rounded-2xl mx-auto mt-5"
             />
             <div className="lg:text-7xl my-5 text-4xl lg:leading-15 leading-12 tracking-[-2%] font-bold font-sans text-center">
