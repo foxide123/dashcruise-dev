@@ -14,10 +14,10 @@ export default function MeetingSchedule() {
         </p>
         <div className="flex-col ml-5 h-full">
           <div className="w-[50px] h-[50px] mb-10 relative">
-            <Image src="/headset-solid.svg" layout="fill" objectFit="cover" alt="meeting icon"/>
+            <Image src="/headset-solid.svg" fill objectFit="cover" alt="meeting icon"/>
           </div>
           <div className="w-[50px] h-[50px] mt-10 relative">
-            <Image src="/calendar-solid.svg" layout="fill" objectFit="cover" alt="meeting icon"/>
+            <Image src="/calendar-solid.svg" fill objectFit="cover" alt="meeting icon"/>
           </div>
         </div>
       </a>
@@ -28,6 +28,7 @@ export default function MeetingSchedule() {
           className="border-0"
           width="100%"
           height="600"
+          loading="lazy"
           frameBorder="0"
         ></iframe>
 
