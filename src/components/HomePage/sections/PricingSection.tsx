@@ -1,9 +1,6 @@
-"use client";
 import PricingPlan from "../PricingPlan";
 import { pricingPlans } from "../../../data/pricingData";
-import dynamic from "next/dynamic";
-
-const MeetingSchedule = dynamic(()=> import("@/components/HomePage/MeetingSchedule"),  { ssr: false });
+import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
 
 export default function PricingSection({
   lg_screen_width,

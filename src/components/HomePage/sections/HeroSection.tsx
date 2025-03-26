@@ -1,10 +1,8 @@
-'use client'
-
 import Image from "next/image";
 import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
 
 
-export default function HeroSection({
+export default async function HeroSection({
   lg_screen_width,
   default_screen_width,
 }: {

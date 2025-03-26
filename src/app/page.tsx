@@ -1,8 +1,9 @@
 import dynamic from "next/dynamic";
 
-const HeroSection = dynamic(
-  () => import("@/components/HomePage/sections/HeroSection")
-);
+import HeroSection from "@/components/HomePage/sections/HeroSection";
+
+export const runtime="edge"
+
 const ComparisonSection = dynamic(
   () => import("@/components/HomePage/sections/ComparisonSection")
 );
@@ -12,13 +13,11 @@ const HighlightSection = dynamic(
 const PricingSection = dynamic(
   () => import("@/components/HomePage/sections/PricingSection")
 );
-const QASection = dynamic(
-  () => import("@/components/HomePage/sections/QASection")
-);
-const ContactUsSection = dynamic(
-  () => import("@/components/HomePage/sections/ContactUsSection")
-);
 
+const ContactUsSection = dynamic(() => import('@/components/HomePage/sections/ContactUsSection'));
+
+const QASection = dynamic(() => import('@/components/HomePage/sections/QASection'));
+ 
 export default function Home() {
   return (
     <div>

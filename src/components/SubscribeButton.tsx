@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { NextResponse } from "next/server";

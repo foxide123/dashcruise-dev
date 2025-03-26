@@ -1,6 +1,3 @@
-'use client'
-import * as React from "react";
-
 interface EmailTemplateProps {
   name: string;
   message: string;

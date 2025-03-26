@@ -1,4 +1,3 @@
-'use client';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 type props = {

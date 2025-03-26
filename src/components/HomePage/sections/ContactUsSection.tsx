@@ -1,10 +1,7 @@
-"use client";
-import { handleFormSubmition } from "@/app/actions";
+'use client'
 
-const PopupModal = dynamic(
-  () => import("@/components/PopupModal"), {ssr:false}
-);
-import dynamic from "next/dynamic";
+import { handleFormSubmition } from "@/app/actions";
+import PopupModal from "@/components/PopupModal";
 import { useState } from "react";
 
 type ContactUsProps = {
