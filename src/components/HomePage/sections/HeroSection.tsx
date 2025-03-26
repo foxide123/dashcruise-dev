@@ -21,7 +21,7 @@ export default function HeroSection({
           {/* Launch Your Site */}
           <div className=" text-white">
             <Image
-              src="/dashcruise_logo_edited_w_280.png"
+              src="/dashcruise_logo_edited_w_280.webp"
               sizes="280px"
               width={280}
               height={280}
