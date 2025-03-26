@@ -22,7 +22,7 @@ export default function HeroSection({
           <div className=" text-white">
             <div className="lg:mt-0 mt-5 w-70 h-70 rounded-[10%] overflow-hidden relative mx-auto bg-blue-50 ">
               <Image src="/dashcruise_logo_edited.png" objectFit="contain"
-            layout="fill" sizes="280px" alt="logo" />
+            layout="fill" sizes="280px" alt="logo" priority/>
             </div>
             <div className="lg:text-7xl my-5 text-4xl lg:leading-15 leading-12 tracking-[-2%] font-bold font-sans text-center">
               <h1>
