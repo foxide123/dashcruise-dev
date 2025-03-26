@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   keywords: ["web agency", "frontend development", "custom website"],
   authors: [{name: "DashcruiseDev", url: "https://dashcruisedev.com"}],
   creator: "DashcruiseDev",
+  icons: {
+    icon: "/favicon.ico"
+  },
   openGraph: {
     title: "DashcruiseDev - Web Design & Development",
     description: "Modern websites crafted with performance and user experience in mind"
@@ -44,6 +47,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico"/>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

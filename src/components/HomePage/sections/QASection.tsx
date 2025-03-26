@@ -35,7 +35,7 @@ export default function QASection({
     {
       question: "I have further questions",
       answer:
-        "In case you still have further questions, you can click the button 'Plan Your Exploration' to schedule a meeting with us. Otherwise, you can always contact us by email: abc@gmail.com.",
+        "In case you still have further questions, you can contact us by email: contact@dashcruisedev.com",
     },
   ];
 

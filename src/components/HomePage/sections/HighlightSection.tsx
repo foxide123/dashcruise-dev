@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function HighlightSection({
   lg_screen_width,
-  default_screen_width
+  default_screen_width,
 }: {
   lg_screen_width: string;
   default_screen_width: string;
@@ -26,20 +28,51 @@ export default function HighlightSection({
               presence with us - where speed meets security!
             </p>
           </div>
-          <img
-            src="/Cloudflare_Logo.png"
-            className="lg:mx-0 lg:mb-0 w-[200px] mb-10 mx-auto"
-          />
+          <div className="lg:mx-0 lg:mb-0 w-[300px] h-[200px] mb-10 mx-auto relative">
+            <Image src="/Cloudflare_Logo.png" sizes="200px" layout="fill" objectFit="contain" alt="cloudflare logo" />
+          </div>
         </div>
         {/* Highlight Images */}
         <div className="xl:flex xl:flex-row mlg:h-full lg:py-22 hidden">
           <div className="mr-8 self-end">
-            <div className="highlight-image-custom bg-[url(/coding.jpg)]"></div>
-            <div className="mt-6 highlight-image-custom bg-[url(/coding_2.jpg)]"></div>
+            <div className="highlight-image-custom relative overflow-hidden">
+              <Image
+                src="/coding.jpg"
+                objectFit="cover"
+                layout="fill"
+                sizes="200px"
+                alt="highlight"
+              />
+            </div>
+            <div className="mt-6 highlight-image-custom overflow-hidden relative">
+              <Image
+                src="/coding_2.jpg"
+                objectFit="cover"
+                layout="fill"
+                sizes="200px"
+                alt="highlight"
+              />
+            </div>
           </div>
           <div className="self-start">
-            <div className="highlight-image-custom bg-[url(/hardware.webp)]"></div>
-            <div className="highlight-image-custom bg-[url(/programmer.webp)]"></div>
+            <div className="highlight-image-custom relative overflow-hidden">
+              <Image
+                src="/hardware.webp"
+                objectFit="cover"
+                layout="fill"
+                sizes="200px"
+                alt="highlight"
+              />
+            </div>
+            <div className="highlight-image-custom relative overflow-hidden">
+              <Image
+                src="/programmer.webp"
+                objectFit="cover"
+                layout="fill"
+                sizes="200px"
+                alt="highlight"
+              />
+            </div>
           </div>
         </div>
       </div>

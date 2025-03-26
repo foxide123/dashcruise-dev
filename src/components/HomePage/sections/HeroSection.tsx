@@ -22,7 +22,7 @@ export default function HeroSection({
           <div className=" text-white">
             <div className="lg:mt-0 mt-5 w-70 h-70 rounded-[10%] overflow-hidden relative mx-auto bg-blue-50 ">
               <Image src="/dashcruise_logo_edited.png" objectFit="contain"
-            layout="fill" alt="logo" />
+            layout="fill" sizes="280px" alt="logo" />
             </div>
             <div className="lg:text-7xl my-5 text-4xl lg:leading-15 leading-12 tracking-[-2%] font-bold font-sans text-center">
               <h1>
@@ -31,9 +31,8 @@ export default function HeroSection({
               </h1>
             </div>
             <p className=" text-center break-words mb-2">
-              We craft custom websites designed to bring your ideas to life
+              We craft custom websites designed to bring your ideas to life and help you grow your business.
               <br />
-              offers valuable insights, practical advice.
             </p>
           </div>
 
