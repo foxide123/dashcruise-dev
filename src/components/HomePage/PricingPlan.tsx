@@ -19,7 +19,7 @@ export default function PricingPlan({
 }: {
   planName: string;
   planPrice: string;
-  planDescription: string;
+  planDescription: string[];
   additionalPagePrice: string | null;
   bgColor: string;
   textPrimaryColor: string;
@@ -33,11 +33,20 @@ export default function PricingPlan({
         <span className={`text-${textPrimaryColor} font-semibold text-xl`}>
           {feature.featureHighlight}
         </span>
-        <p className={`text-${textSecondaryColor}`}>
+        <span className={`text-${textSecondaryColor}`}>
           {feature.featureDescription}
-        </p>
+        </span>
       </span>
     </li>
+  ));
+
+  const formattedPlanDescription = planDescription.map((line, index) => (
+    <p
+      key={index}
+      className={`text-2xl mt-5 mb-2 px-2 text-${textSecondaryColor} ${index === 0 ? 'mb-[-10px]' : ''}`}
+    >
+      {line}
+    </p>
   ));
 
   return (
@@ -70,9 +79,7 @@ export default function PricingPlan({
           </div>
         </div>
         {/* Plan Description */}
-        <p className={` text-2xl mt-5 mb-2 px-2 text-${textSecondaryColor}`}>
-          {planDescription}
-        </p>
+        {formattedPlanDescription}
       </div>
 
       <ul className="mb-10 font-medium text-xl">{listItems}</ul>

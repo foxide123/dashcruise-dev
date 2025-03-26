@@ -56,25 +56,27 @@ export const pricingPlans = [
   {
     name: "🌱 Startup",
     price: "49",
-    description:
-      "A simple, professional website to get your business online fast" +
-      "Perfect for new businesses or solo professionals who just need a solid online presence",
+    description: [
+      "A simple, professional website to get your business online fast.",
+        "Perfect for new businesses or solo professionals who just need a solid online presence",
+    ],
     additionalPagePrice: "19",
     features: basicFeatures,
     bgColor: "bg-gray-900",
     textPrimaryColor: "white",
-    textSecondaryColor: "gray-400"
+    textSecondaryColor: "gray-400",
   },
   {
     name: "✨ Standard",
     price: "79",
-    description:
-      "A complete website package with SEO and unlimited updates." +
-      "Ideal for growing businesses that want a custom site, better visibility, and peace of mind",
+    description: [
+      "A complete website package with SEO and unlimited updates.",
+        "Ideal for growing businesses that want a custom site, better visibility, and peace of mind",
+    ],
     additionalPagePrice: "19",
     features: standardFeatures,
     bgColor: "bg-gray-100",
     textPrimaryColor: "black",
-    textSecondaryColor: "gray-500"
+    textSecondaryColor: "gray-500",
   },
 ];
