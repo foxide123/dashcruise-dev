@@ -37,6 +37,7 @@ export default function ContactUsSection({
             setPending(false);
             if (result?.success) {
               setShowPopup(true);
+              console.log("Setting show popup to true");
               setFormValues({ name: "", email: "", message: "" });
               setTimeout(() => setShowPopup(false), 3000);
             } else if (result?.error) {
@@ -87,7 +88,7 @@ export default function ContactUsSection({
             {pending ? "Sending..." : "Send"}
           </button>
           {showPopup && (
-            <PopupModal />
+            <PopupModal onClose={() => setShowPopup(false)}/>
           )}
         </form>
       </div>

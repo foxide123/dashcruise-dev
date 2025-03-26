@@ -1,43 +1,36 @@
 "use client";
-
 import { useEffect } from "react";
 
 export default function PopupModal({
   message = "Message sent successfully",
+  onClose,
 }: {
   message?: string;
+  onClose: () => void;
 }) {
   useEffect(() => {
-    const modal = document.getElementById("myModal");
-    const span = document.getElementById("close");
-
-    span!.onclick = () => (modal!.style.display = "none");
-
-    window.onclick = (event) => {
-      if (event.target == modal) {
-        modal!.style.display = "none";
+    const handleClickOutside = (e: MouseEvent) => {
+      const modal = document.getElementById("modal-content");
+      if (modal && !modal.contains(e.target as Node)) {
+        onClose();
       }
     };
-    // Optional: Cleanup listeners on unmount
-    return () => {
-      span!.onclick = null;
-      window.onclick = null;
-    };
-  }, []);
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, [onClose]);
 
   return (
-    <div
-      id="myModal"
-      className="display-none fixed z-1 pt-25 l-0 t-0 w-full h-full overflow-auto bg-gray-300"
-    >
-      {/*} Modal content */}
-      <div className="bg-white m-auto p-5 border-2 border-black w-4/5">
-        <span
-          id="close"
-          className="text-gray-300 float-right text-3xl font-bold hover:text-black cursor-pointer"
+    <div className="fixed z-50 top-0 left-0 w-full h-ful flex justify-center items-center">
+      <div
+        id="modal-content"
+        className="bg-white p-5 rounded-lg shadow-lg w-4/5 max-w-md relative"
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-4 text-2xl font-bold text-gray-600 hover:text-black"
         >
           &times;
-        </span>
+        </button>
         <p>{message}</p>
       </div>
     </div>

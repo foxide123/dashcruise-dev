@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MeetingSchedule() {
   return (
     <div style={{ maxWidth: "max-content" }} className="text-center mx-auto">
@@ -10,8 +12,12 @@ export default function MeetingSchedule() {
           Schedule a Meeting with Us to Discuss the Details
         </p>
         <div className="flex-col ml-5 h-full">
-          <img src="headset-solid.svg" width={50} className="mb-10" />
-          <img src="/calendar-solid.svg" width={50} className="mt-10" />
+          <div className="w-[50px] h-[50px] mb-10 relative">
+            <Image src="/headset-solid.svg" layout="fill" objectFit="cover" alt="meeting icon"/>
+          </div>
+          <div className="w-[50px] h-[50px] mt-10 relative">
+            <Image src="/calendar-solid.svg" layout="fill" objectFit="cover" alt="meeting icon"/>
+          </div>
         </div>
       </a>
       <div className="rounded-xl bg-carrot-300 rounded-t-none">
