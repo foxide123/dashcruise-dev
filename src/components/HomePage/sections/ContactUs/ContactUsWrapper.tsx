@@ -1,8 +1,10 @@
 "use client"
 
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 
-const ContactUsSection = dynamic(() => import("./ContactUsSection"), {ssr:false})
+import ContactUsSection from "./ContactUsSection";
+
+//const ContactUsSection = dynamic(() => import("./ContactUsSection"), {ssr:false, loading: () => <p>Contact Us Form Loading...</p>})
 export default function ContactUsWrapper({
     lg_screen_width,
     default_screen_width,
