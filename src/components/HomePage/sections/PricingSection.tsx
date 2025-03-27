@@ -1,5 +1,5 @@
 import PricingPlan from "../PricingPlan";
-import { pricingPlans } from "../../../data/pricingData";
+import { PricingPlans } from "../../../data/PricingData";
 import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
 
 export default function PricingSection({
@@ -9,7 +9,7 @@ export default function PricingSection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
-  const pricingComponents = pricingPlans.map((plan, index) => (
+  const pricingComponents = PricingPlans.map((plan, index) => (
     <PricingPlan
       key={index}
       planName={plan.name}

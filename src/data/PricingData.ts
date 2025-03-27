@@ -52,7 +52,7 @@ const standardFeatures = [
   },
 ];
 
-export const pricingPlans = [
+export const PricingPlans = [
   {
     name: "🌱 Startup",
     price: "49",
