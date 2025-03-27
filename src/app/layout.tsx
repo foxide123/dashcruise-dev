@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
@@ -9,12 +8,6 @@ import { ConsentProvider } from "@/context/ConsentContext";
 import Header from "@/components/Header";
 
 config.autoAddCss = false;
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: "--font-jakarta",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "DashcruiseDev - Web Design & Development Agency",
@@ -34,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 const lg_screen_width = "lg:w-[75vw]";
-const default_screen_width="w[85vw]";
+const default_screen_width = "w[85vw]";
 
 export default function RootLayout({
   children,
@@ -47,14 +40,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={`${plusJakartaSans.variable} antialiased`}
-      >
-        <Header lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
-        <ConsentProvider>
-          {children}
-          </ConsentProvider>
+      <body className={` antialiased`}>
+        <Header
+          lg_screen_width={lg_screen_width}
+          default_screen_width={default_screen_width}
+        />
+        <ConsentProvider>{children}</ConsentProvider>
       </body>
     </html>
   );
