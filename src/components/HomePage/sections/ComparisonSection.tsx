@@ -74,7 +74,7 @@ export default function ComparisonSection({
           {/* WordPress container */}
           <div className="lg:mt-0 comparison-container-custom border-vampire-400 mt-5">
             <div>
-              <h2 className="font-medium text-2xl leading-8 my-6">WordPress</h2>
+              <h2 className="font-medium text-2xl leading-8 my-6">Website Builders</h2>
             </div>
             <ul>
               <li className="list-item-custom">

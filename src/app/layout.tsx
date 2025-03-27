@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ConsentProvider } from "@/context/ConsentContext";
+import Header from "@/components/Header";
 
 config.autoAddCss = false;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: "--font-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,6 +33,9 @@ export const metadata: Metadata = {
   },
 };
 
+const lg_screen_width = "lg:w-[75vw]";
+const default_screen_width="w[85vw]";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,13 +44,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${plusJakartaSans.variable} antialiased`}
       >
-        <ConsentProvider>{children}</ConsentProvider>
+        <Header lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
+        <ConsentProvider>
+          {children}
+          </ConsentProvider>
       </body>
     </html>
   );

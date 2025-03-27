@@ -4,7 +4,7 @@ import CheckIcon from "@/components/icons/CheckIcon";
 
 export default async function ExclusivePlan() {
   return (
-    <div className="lg:w-[560px] lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
+    <div className="lg:w-[640px] lg:h-[480px] lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
       <div>
         <h1 className="text-2xl font-medium leading-8 space-y-6">
           Exclusive Plan
