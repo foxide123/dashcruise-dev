@@ -1,23 +1,20 @@
 import dynamic from "next/dynamic";
 
+
+export const runtime = "edge";
+
 import HeroSection from "@/components/HomePage/sections/HeroSection";
 
-export const runtime="edge"
+import ComparisonSection from "@/components/HomePage/sections/ComparisonSection";
 
-const ComparisonSection = dynamic(
-  () => import("@/components/HomePage/sections/ComparisonSection")
-);
-const HighlightSection = dynamic(
-  () => import("@/components/HomePage/sections/HighlightSection")
-);
-const PricingSection = dynamic(
-  () => import("@/components/HomePage/sections/PricingSection")
-);
+import HighlightSection from "@/components/HomePage/sections/HighlightSection";
 
-const ContactUsSection = dynamic(() => import('@/components/HomePage/sections/ContactUsSection'));
+import PricingSection from "@/components/HomePage/sections/PricingSection";
 
-const QASection = dynamic(() => import('@/components/HomePage/sections/QASection'));
- 
+const ContactUsWrapper = dynamic(() => import("@/components/HomePage/sections/ContactUs/ContactUsWrapper"));
+
+const QAWrapper = dynamic(() => import("@/components/HomePage/sections/QA/QAWrapper"));
+
 export default function Home() {
   return (
     <div>
@@ -37,7 +34,7 @@ export default function Home() {
         lg_screen_width="lg:w-[75vw]"
         default_screen_width="w-[85vw]"
       />*/}
-      <QASection
+      <QAWrapper
         lg_screen_width="lg:w-[75vw]"
         default_screen_width="w-[85vw]"
       />
@@ -45,7 +42,7 @@ export default function Home() {
         lg_screen_width="lg:w-[75vw]"
         default_screen_width="w-[85vw]"
       />
-      <ContactUsSection
+      <ContactUsWrapper
         lg_screen_width="lg:w-[85vw]"
         default_screen_width="w-[85vw]"
       />
