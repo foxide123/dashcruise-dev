@@ -59,7 +59,7 @@ export default function PricingPlan({
         <div className="flex flex-row items-center">
           <div className="overflow-hidden relative w-20 h-20">
             <Image
-              src="/abstract-2.jpg"
+              src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/8ecc571e-8203-479c-f4e9-807c9571a100/thumbnail300x300"
               objectFit="contain"
               layout="fill"
               sizes="280px"

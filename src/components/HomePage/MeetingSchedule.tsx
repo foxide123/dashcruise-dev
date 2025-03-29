@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function MeetingSchedule() {
   
   return (
@@ -14,10 +12,10 @@ export default function MeetingSchedule() {
         </p>
         <div className="flex-col ml-5 h-full">
           <div className="w-[50px] h-[50px] mb-10 relative">
-            <Image src="/headset-solid.svg" fill objectFit="cover" alt="meeting icon"/>
+            <img src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/912efd56-89df-4499-5d75-b11629a69f00/icon100x100" width={100} height={100} alt="meeting icon" className="object-cover"/>
           </div>
           <div className="w-[50px] h-[50px] mt-10 relative">
-            <Image src="/calendar-solid.svg" fill objectFit="cover" alt="meeting icon"/>
+            <img src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/9aeff982-f71c-4efe-c4ae-66667a161200/icon100x100" width={100} height={100} alt="meeting icon" className="object-cover"/>
           </div>
         </div>
       </a>
