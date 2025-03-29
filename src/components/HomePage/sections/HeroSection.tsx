@@ -15,9 +15,10 @@ export default async function HeroSection({
         <Image
           src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740"
           alt="hero background"
-          layout="fill"
-          objectFit="contain"
+          fill
+          objectFit="cover"
           priority
+          unoptimized
         />
       </div>
 
