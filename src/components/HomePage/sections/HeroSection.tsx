@@ -18,6 +18,8 @@ export default async function HeroSection({
           layout="fill"
           objectFit="contain"
           priority
+          decoding="async"
+          unoptimized
         />
       </div>
 
