@@ -5,7 +5,7 @@ import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ConsentProvider } from "@/context/ConsentContext";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/LayoutComponents/NavBar";
 
 config.autoAddCss = false;
 
@@ -38,20 +38,23 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
-        <link rel="icon" href="/favicon.ico"/>
+        <Script rel="preload" src="https://scripts.simpleanalyticscdn.com/latest.js" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.io" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link
+        <link rel="preload"
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
-          rel="stylesheet"
+          as="style"
         />
       </head>
       <body className={` antialiased`}>
-        <NavBar
-          lg_screen_width={lg_screen_width}
-          default_screen_width={default_screen_width}
-        />
+        <div className="bg-black w-screen flex justify-center">
+          <NavBar
+            lg_screen_width={lg_screen_width}
+            default_screen_width={default_screen_width}
+          />
+        </div>
+
         <ConsentProvider>{children}</ConsentProvider>
       </body>
     </html>

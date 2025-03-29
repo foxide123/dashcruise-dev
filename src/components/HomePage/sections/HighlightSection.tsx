@@ -28,49 +28,54 @@ export default function HighlightSection({
               presence with us - where speed meets security!
             </p>
           </div>
-          <div className="lg:mx-0 lg:mb-0 w-[300px] h-[200px] mb-10 mx-auto relative">
-            <Image src="/Cloudflare_Logo.png" sizes="200px" layout="fill" objectFit="contain" alt="cloudflare logo" />
-          </div>
+            <Image
+              src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/aac4f90f-a064-4352-4cc8-9aee41df7100/thumbnail300x300"
+              sizes="300px"
+              width={300}
+              height={200}
+              alt="Cloudflare Logo"
+              className="lg:mx-0 lg:mb-0 mb-10 mx-auto"
+            />
         </div>
         {/* Highlight Images */}
         <div className="xl:flex xl:flex-row mlg:h-full lg:py-22 hidden">
           <div className="mr-8 self-end">
-            <div className="highlight-image-custom relative overflow-hidden">
-              <Image
-                src="/coding.jpg"
+            <div className="highlight-image-custom overflow-hidden relative">
+            <Image
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/53a11d33-0aa1-4d97-c26a-3cd1e2756800/thumbnail300x300"
                 objectFit="cover"
                 layout="fill"
                 sizes="200px"
-                alt="highlight"
+                alt="Highlight"
               />
             </div>
             <div className="mt-6 highlight-image-custom overflow-hidden relative">
               <Image
-                src="/coding_2.jpg"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/d83d4048-3ffa-4b17-8ec8-ac1b1812e600/thumbnail300x300"
                 objectFit="cover"
                 layout="fill"
                 sizes="200px"
-                alt="highlight"
+                alt="Highlight"
               />
             </div>
           </div>
           <div className="self-start">
             <div className="highlight-image-custom relative overflow-hidden">
               <Image
-                src="/hardware.webp"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/ebd7e64a-bc89-4c28-7630-c739848a6200/thumbnail300x300"
                 objectFit="cover"
                 layout="fill"
                 sizes="200px"
-                alt="highlight"
+                alt="Highlight"
               />
             </div>
             <div className="highlight-image-custom relative overflow-hidden">
               <Image
-                src="/programmer.webp"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/e15d004b-f8ce-4e07-c91a-a0d3e7706600/thumbnail300x300"
                 objectFit="cover"
                 layout="fill"
                 sizes="200px"
-                alt="highlight"
+                alt="Highlight"
               />
             </div>
           </div>
