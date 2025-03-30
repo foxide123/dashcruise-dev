@@ -21,7 +21,6 @@ export default function HeroSection({
           objectFit="contain"
           priority
           decoding="async"
-          unoptimized
         />
       </div>
 
