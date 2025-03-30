@@ -1,8 +1,10 @@
+"use client";
+
 import { IconSizeEnum } from "@/types/icon_types";
 import SubscribeButton from "../SubscribeButton";
 import CheckIcon from "@/components/icons/CheckIcon";
 
-export default async function ExclusivePlan() {
+export default function ExclusivePlan() {
   return (
     <div className="lg:w-[640px] lg:h-[480px] lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
       <div>

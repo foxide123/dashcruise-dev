@@ -1,3 +1,5 @@
+"use client";
+
 import PricingPlan from "../PricingPlan";
 import { PricingPlans } from "../../../data/PricingData";
 import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
@@ -24,13 +26,13 @@ export default function PricingSection({
   ));
 
   return (
-    <div className="lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8 bg-amber-200">
+    <div className="lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8">
       <div className="max-w-md mx-auto mb-14 text-center">
         <h1 className="text-4xl font-semibold mb-6 lg:text-5xl">
-          <span className="text-black">Flexible</span> Plans
+        Choose the Plan that's Best for Your Business
         </h1>
         <p className="text-xl text-gray-500 font-medium">
-          Choose a plan that works best for you and your team.
+        From side hustlers to scaling businesses — find the right tools to grow your online presence
         </p>
       </div>
 
