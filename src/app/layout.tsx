@@ -4,8 +4,6 @@ import Script from "next/script";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { ConsentProvider } from "@/context/ConsentContext";
-import NavBar from "@/components/LayoutComponents/NavBar";
 import NavWrapper from "@/components/LayoutComponents/NavWrapper";
 
 config.autoAddCss = false;
@@ -26,9 +24,6 @@ export const metadata: Metadata = {
       "Modern websites crafted with performance and user experience in mind",
   },
 };
-
-const lg_screen_width = "lg:w-[75vw]";
-const default_screen_width = "w[85vw]";
 
 export default function RootLayout({
   children,

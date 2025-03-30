@@ -22,7 +22,7 @@ export default function ContactUsSection({
   });
 
   return (
-    <div className="mt-5 w-screen flex justify-center mb-30">
+    <div className="caret-transparent mt-5 w-screen flex justify-center mb-30">
       {/* Wrapper with defined width */}
       <div className={`lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
 
@@ -34,10 +34,7 @@ export default function ContactUsSection({
             connect with you!
           </h1>
           <p className="text-base leading-6 mt-4">
-            Lorem ipsum dolor sit amet consectetur. Id enim erat faucibus luctus
-            aenean. Maecenas lectus at ut volutpat vel quisque cum id. Amet non
-            morbi in quis eget suspendisse. Pulvinar eu ullamcorper urna quis
-            viverra sit non.
+            Please fill out the contact form and we will contact you as soon as possible with all of the informations and answers to your questions.
           </p>
         </div>
 

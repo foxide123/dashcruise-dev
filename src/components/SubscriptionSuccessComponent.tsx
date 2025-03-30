@@ -27,7 +27,7 @@ export default function SubscriptionSuccessComponent() {
           Your payment was successful, and your subscription is now active.
         </h2>
         <p className="font-normal text-xl tracking-tight mt-[40px] w-[815px] px-10">
-          You'll receive an email from us with all the details and next steps to
+          You&apos;ll receive an email from us with all the details and next steps to
           get started. If you don&apos;t see the email within a few minutes,
           check spam or contact us at{" "}
           <span className="font-semibold text-carrot-500">

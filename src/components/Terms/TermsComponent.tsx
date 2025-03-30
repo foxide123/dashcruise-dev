@@ -2,7 +2,7 @@ import "./terms.css";
 
 export default function TermsComponent() {
   return (
-    <div className="container v-screen">
+    <div className="caret-transparent container v-screen">
       {/* Introduction */}
       <h1>Dashcruise Contract</h1>
       <h2>Design/development contract</h2>
