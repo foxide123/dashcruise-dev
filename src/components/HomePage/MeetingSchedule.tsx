@@ -1,7 +1,7 @@
 export default function MeetingSchedule() {
   
   return (
-    <div style={{ maxWidth: "max-content" }} className="text-center mx-auto">
+    <div style={{ maxWidth: "max-content" }} className="caret-transparent text-center mx-auto">
       <a
         target="_blank"
         href="https://calendar.app.google/q3B2rkBJtAgUdwLR6"

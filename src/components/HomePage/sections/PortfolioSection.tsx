@@ -8,7 +8,7 @@ export default function PortfolioSection({
   default_screen_width: string;
 }) {
   return (
-    <div className="flex justify-center w-screen ">
+    <div className="caret-transparent flex justify-center w-screen ">
       <div
         className={`lg:text-start lg:py-10 ${lg_screen_width} ${default_screen_width} text-center py-5`}
       >

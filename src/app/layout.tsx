@@ -4,8 +4,7 @@ import Script from "next/script";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { ConsentProvider } from "@/context/ConsentContext";
-import NavBar from "@/components/LayoutComponents/NavBar";
+import NavWrapper from "@/components/LayoutComponents/NavWrapper";
 
 config.autoAddCss = false;
 
@@ -26,9 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-const lg_screen_width = "lg:w-[75vw]";
-const default_screen_width = "w[85vw]";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,24 +34,21 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script rel="preload" src="https://scripts.simpleanalyticscdn.com/latest.js" />
+        <Script
+          rel="preload"
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.io" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link rel="preload"
+        <link
+          rel="preload"
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
           as="style"
         />
       </head>
       <body className={` antialiased`}>
-        <div className="bg-black w-screen flex justify-center">
-          <NavBar
-            lg_screen_width={lg_screen_width}
-            default_screen_width={default_screen_width}
-          />
-        </div>
-
-        <ConsentProvider>{children}</ConsentProvider>
+        <NavWrapper>{children}</NavWrapper>
       </body>
     </html>
   );

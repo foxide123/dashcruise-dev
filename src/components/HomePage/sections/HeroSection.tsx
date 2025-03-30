@@ -1,7 +1,9 @@
+"use client";
+
 import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
 import Image from "next/image";
 
-export default async function HeroSection({
+export default function HeroSection({
   lg_screen_width,
   default_screen_width,
 }: {
@@ -10,7 +12,7 @@ export default async function HeroSection({
 }) {
   {/* bg-[url(https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740)] */}
   return (
-    <div className="relative w-screen bg-black flex justify-center lg:min-h-[75vh]">
+    <div className="caret-transparent relative w-screen bg-black flex justify-center lg:min-h-[75vh]">
       <div className="absolute inset-0 h-full w-full">
         <Image
           src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740"
@@ -27,7 +29,7 @@ export default async function HeroSection({
         className={`pb-[48px] ${lg_screen_width} flex ${default_screen_width}`}
       >
         {/* Main Hero Section */}
-        <div className="lg:justify-between lg:flex-row flex flex-col justify-center items-center w-full">
+        <div className="lg:justify-between lg:flex-row flex flex-col justify-center items-center w-full z-10">
           {/* Launch Your Site */}
           <div className="lg:w-[662px] flex flex-col lg:items-start text-white">
             <div className="lg:text-7xl lg:leading-[90px] lg:text-start  my-5 text-4xl leading-12 tracking-[-2%] font-bold font-sans text-center">

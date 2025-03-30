@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function HighlightSection({
@@ -8,7 +10,7 @@ export default function HighlightSection({
   default_screen_width: string;
 }) {
   return (
-    <div className="xl:text-start lg:text-center text-center flex flex-row justify-center bg-magenta-500  w-screen">
+    <div className="caret-transparent xl:text-start lg:text-center text-center flex flex-row justify-center bg-magenta-500  w-screen">
       <div
         className={`lg:justify-between ${lg_screen_width} lg:py-0 lg:flex-row ${default_screen_width} flex flex-col py-10 text-white items-center justify-center`}
       >

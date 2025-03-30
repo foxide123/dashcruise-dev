@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { NextResponse } from "next/server";
 import { CheckoutApiResponse } from "@/types/api_types";
 import { useRouter } from "next/navigation";
 
@@ -42,9 +41,7 @@ export default function SubscribeButton({
       const stripe = await stripePromise;
       await stripe?.redirectToCheckout({ sessionId: data.sessionId });
     } catch (error) {
-      NextResponse.json({
-        error: error instanceof Error ? error.message : error,
-      });
+     console.error(error);
     }
     setLoading(false);
   };
