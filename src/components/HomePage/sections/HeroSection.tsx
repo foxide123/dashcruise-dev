@@ -1,9 +1,7 @@
-"use client";
-
 import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
-import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
+
+import ContainerTextFlipClient from "@/components/ui/ui_containers/ContainerTextFlipClient";
 
 export default function HeroSection({
   lg_screen_width,
@@ -13,27 +11,24 @@ export default function HeroSection({
   default_screen_width: string;
 }) {
   // const [hasMounted, setHasMounted] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-
-  const bgToRender = !isMobile && (
-    <div className="absolute inset-0 h-full w-full">
-      <Image
-        src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740"
-        alt="hero background"
-        layout="fill"
-        objectFit="contain"
-        priority
-        decoding="async"
-      />
-    </div>
-  );
 
   {
     /* bg-[url(https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740)] */
   }
   return (
     <div className="caret-transparent relative w-screen bg-black flex justify-center lg:min-h-[75vh]">
-      {bgToRender}
+      {/* Background Image: rendered only on Large Screens */}
+      <div className="absolute inset-0 h-full w-full hidden lg:block">
+        <Image
+          src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740"
+          alt="hero background"
+          layout="fill"
+          objectFit="contain"
+          priority
+          decoding="async"
+        />
+      </div>
+      ;
       <div
         className={`pb-[48px] ${lg_screen_width} flex ${default_screen_width}`}
       >
@@ -45,9 +40,11 @@ export default function HeroSection({
               <h1>
                 Bring Your
                 <div>
-                  <ContainerTextFlip words={['Idea', 'Brand', 'Project', 'Portfolio', 'Story']}/>
-                </div>
-                {" "} Online
+                  <ContainerTextFlipClient
+                    words={["Idea", "Brand", "Project", "Portfolio", "Story"]}
+                  />
+                </div>{" "}
+                Online
               </h1>
               <div></div>
             </div>
