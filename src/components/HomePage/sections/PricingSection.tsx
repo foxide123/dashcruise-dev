@@ -26,7 +26,8 @@ export default function PricingSection({
   ));
 
   return (
-    <div className=" caret-transparent lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8">
+    <div className="bg-white caret-transparent lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8">
+      
       <div className="max-w-md mx-auto mb-14 text-center">
         <h1 className="text-4xl font-semibold mb-6 lg:text-5xl">
         Choose the Plan that&apos;s Best for Your Business
