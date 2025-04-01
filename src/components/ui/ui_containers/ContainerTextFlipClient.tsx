@@ -21,7 +21,7 @@ export default function ContainerTextFlipClient(props: any) {
     // Static fallback: renders on the server and on the first client render.
     // Use the first word or a predetermined word that matches the layout.
     return (
-      <span>{props.words && props.words[props.words.length -1] ? props.words[props.words.length -1] : "Brand"}</span>
+      <span className="text-carrot-500">{props.words && props.words[props.words.length -1] ? props.words[props.words.length -1] : "Brand"}</span>
     );
   }
 

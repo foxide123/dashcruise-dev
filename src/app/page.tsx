@@ -12,6 +12,7 @@ import ClientOnly from "@/components/ClientOnly";
 
 import QAWrapper from "@/components/HomePage/sections/QA/QAWrapper";
 import ContactUsWrapper from "@/components/HomePage/sections/ContactUs/ContactUsWrapper";
+import PortfolioSection from "@/components/HomePage/sections/PortfolioSection";
 
 
 export default function Home() {
@@ -31,12 +32,12 @@ export default function Home() {
         lg_screen_width={lg_screen_width}
         default_screen_width={default_screen_width}
       />
-      {/*
+      
        <PortfolioSection
           lg_screen_width="lg:w-[75vw]"
           default_screen_width="w-[85vw]"
         />
-      */}
+      
         <ClientOnly>
           <QAWrapper
             lg_screen_width={lg_screen_width}

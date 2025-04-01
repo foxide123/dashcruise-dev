@@ -1,3 +1,4 @@
+import Testimonials1 from "@/components/Testimonials";
 import Image from "next/image";
 
 export default function PortfolioSection({
@@ -8,13 +9,14 @@ export default function PortfolioSection({
   default_screen_width: string;
 }) {
   return (
-    <div className="caret-transparent flex justify-center w-screen ">
+    <div className="bg-white caret-transparent flex justify-center w-screen ">
       <div
         className={`lg:text-start lg:py-10 ${lg_screen_width} ${default_screen_width} text-center py-5`}
       >
         <h1 className="font-medium text-5xl leading-15 my-6 tracking-tight">
           See Our Work in Action
         </h1>
+        <Testimonials1/>
         {/* Highlights Container */}
         <div className="lg:flex-row lg:py-20 flex flex-col items-center justify-between text-center py-10">
           {/* Highlight 1 */}

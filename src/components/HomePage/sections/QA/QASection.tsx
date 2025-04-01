@@ -45,7 +45,7 @@ export default function QASection({
   };
 
   return (
-    <div className="caret-transparent flex justify-center w-screen">
+    <div className="bg-white caret-transparent flex justify-center w-screen">
       <div 
       className={`mt-15 lg:text-start ${lg_screen_width} ${default_screen_width} text-center my-10`}>
         <h1 className=" font-medium text-5xl leading-15 tracking-tight">
