@@ -1,6 +1,7 @@
 "use client";
 
 import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
@@ -11,7 +12,7 @@ export default function HeroSection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
- // const [hasMounted, setHasMounted] = useState(false);
+  // const [hasMounted, setHasMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const bgToRender = !isMobile && (
@@ -42,9 +43,13 @@ export default function HeroSection({
           <div className="lg:w-[662px] flex flex-col lg:items-start text-white">
             <div className="lg:text-7xl lg:leading-[90px] lg:text-start  my-5 text-4xl leading-12 tracking-[-2%] font-bold font-sans text-center">
               <h1>
-                Launch Your Website With Our{" "}
-                <span className="text-carrot-500">Exclusive </span>Offer
+                Bring Your
+                <div>
+                  <ContainerTextFlip words={['Idea', 'Brand', 'Project', 'Portfolio', 'Story']}/>
+                </div>
+                {" "} Online
               </h1>
+              <div></div>
             </div>
             {/* <p className="lg:text-start text-base leading-6 text-center break-words mb-2">
               We craft custom websites designed to bring your ideas to life and
