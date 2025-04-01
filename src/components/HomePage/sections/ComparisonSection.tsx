@@ -17,24 +17,24 @@ export default function ComparisonSection({
       >
         {/* Build Faster Section */}
         <div className="">
-          <h1 className="header-custom">Build Faster, Rank Higher</h1>
-          <h1 className="header-custom">Stand Out from Crowd</h1>
+          <h1 className="header-custom">Tailor-Made Websites Built to Elevate Your Brand</h1>
+          <h1 className="header-custom"></h1>
         </div>
 
-        <p className="font-normal text-base leading-6 my-4">
-          We adhere to the highest standards of quality in all our products and
-          services. From design and development to manufacturing.
+        <p className="font-normal text-base leading-6 mt-5">
+          Not Just Another Slow Template Everyone Uses - Websites as Unique as You Are
         </p>
+        <hr className="mt-8"/>
         {/* LandingPageDev and WordPress container */}
-        <div className="lg:flex-row items-center flex flex-col justify-between w-full overflow-hidden">
+        <div className="lg:flex-row items-center flex flex-col justify-between w-full overflow-hidden mt-10">
           {/* LandingPageDev container */}
           <div className="comparison-container-custom border-magenta-300">
             <div>
               <h2 className="font-medium text-2xl leading-8 my-6">
-                LandingPageDev
+                Our Websites
               </h2>
             </div>
-            <ul>
+            <ul className="text-start">
               <li className="list-item-custom">
                 <div>
                   <CheckIcon />

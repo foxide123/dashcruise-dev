@@ -51,13 +51,13 @@ export default function PricingPlan({
 
   return (
     <div
-      className={`relative lg:order-1 lg:mt-0 lg:flex-none xl:w-2/5 lg:h-full sm:w-2/3 flex-1 p-8 order-1 shadow-xl rounded-3xl ${bgColor} text-${textPrimaryColor} mt-5`}
+      className={`lg:order-1 lg:mt-0 lg:flex-none xl:w-2/5 lg:h-full sm:w-2/3 relative flex-1 p-8 order-1 shadow-xl rounded-3xl ${bgColor} text-${textPrimaryColor} mt-5`}
     >
       {/*Icon +  Price + Description + Bottom Border */}
       <div className={`mb-7 pb-5 flex-col items-center border-b `}>
         {/* Icon + Name + Price */}
         <div className="flex flex-row items-center justify-center">
-          <div className="overflow-hidden absolute w-20 h-20 left-6 top-6">
+          <div className="md:block overflow-hidden absolute w-20 h-20 left-6 top-6 hidden">
             <Image
               src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/8ecc571e-8203-479c-f4e9-807c9571a100/thumbnail300x300"
               objectFit="contain"
@@ -67,7 +67,7 @@ export default function PricingPlan({
               className="rounded-3xl "
             />
           </div>
-          <div className="w-full ml-5 border-2 border-green-500 mx-auto flex flex-col items-center">
+          <div className="md:ml-5 w-full ml-0 mx-auto flex flex-col items-center">
             <span
               className={`block mx-auto text-2xl font-semibold ${textSecondaryColor}`}
             >
@@ -84,7 +84,9 @@ export default function PricingPlan({
           </div>
         </div>
         {/* Plan Description */}
+        <div className="md:text-start text-center">
         {formattedPlanDescription}
+        </div>
       </div>
 
       <ul className="mb-10 font-medium text-xl">{listItems}</ul>

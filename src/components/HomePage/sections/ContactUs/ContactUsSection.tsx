@@ -24,10 +24,10 @@ export default function ContactUsSection({
   return (
     <div className="caret-transparent mt-5 w-screen flex justify-center mb-30">
       {/* Wrapper with defined width */}
-      <div className={`lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
+      <div className={`mt-10 lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
 
         {/* Description */}
-        <div className="lg:w-[530px]">
+        <div className="lg:w-[530px] md:text-start text-center">
           <h2 className="text-carrot-500 text-sm leading-5 mb-2">Contact Us</h2>
           <h1 className="text-5xl tracking-tight">
             We&apos;d love to <br />

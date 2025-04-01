@@ -71,7 +71,7 @@ export const PricingPlans = [
     description: [
       "Perfect for new businesses or solo professionals who just need a solid online presence",
     ],
-    additionalPagePrice: "19",
+    additionalPagePrice: "9",
     features: basicFeatures,
     bgColor: "bg-gray-900",
     textPrimaryColor: "white",
@@ -83,7 +83,7 @@ export const PricingPlans = [
     description: [
       "Ideal for growing businesses that want a custom site, better visibility, and peace of mind",
     ],
-    additionalPagePrice: "19",
+    additionalPagePrice: "9",
     features: standardFeatures,
     bgColor: "bg-gray-100",
     textPrimaryColor: "black",
