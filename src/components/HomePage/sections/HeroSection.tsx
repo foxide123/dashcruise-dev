@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import ContainerTextFlipClient from "@/components/ui/ui_containers/ContainerTextFlipClient";
 
+
 export default function HeroSection({
   lg_screen_width,
   default_screen_width,

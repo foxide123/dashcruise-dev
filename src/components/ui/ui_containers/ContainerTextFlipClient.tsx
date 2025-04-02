@@ -2,29 +2,24 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import { ContainerTextFlip } from "@/components/ui/ui_containers/container-text-flip";
 
 //eslint-disable-next-line
 export default function ContainerTextFlipClient(props: any) {
   const [isHydrated, setIsHydrated] = useState(false);
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [startAnimation, setStartAnimation]= useState(false);
 
   useEffect(() => {
     setIsHydrated(true);
     setStartAnimation(true);
   }, []);
 
-  if (!isHydrated || !startAnimation) {
-    // Static fallback: renders on the server and on the first client render.
-    // Use the first word or a predetermined word that matches the layout.
+  if(!isHydrated || !startAnimation) {
     return (
       <span className="text-carrot-500">
-        {props.words && props.words[props.words.length - 1]
-          ? props.words[props.words.length - 1]
-          : "Brand"}
+         {props.words && props.words[props.words.length - 1] ? props.words[props.words.length - 1] : "Brand"}
       </span>
-    );
+    )
   }
-
   return <ContainerTextFlip {...props} />;
 }
