@@ -1,4 +1,3 @@
-import Testimonials1 from "@/components/Testimonials";
 import Image from "next/image";
 
 export default function PortfolioSection({

@@ -2,7 +2,6 @@
 
 import PricingPlan from "@/components/HomePage/sections/Pricing/PricingPlan";
 import { PricingPlans } from "@/data/PricingData";
-import { Switch } from "@/components/ui/switch";
 
 export default function PricingSection({
   lg_screen_width,
