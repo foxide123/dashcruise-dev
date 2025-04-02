@@ -41,11 +41,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.io" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
-          as="style"
-        />
       </head>
       <body className={` antialiased`}>
         <NavWrapper lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}>{children}</NavWrapper>
