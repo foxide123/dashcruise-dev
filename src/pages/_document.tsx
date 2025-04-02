@@ -13,6 +13,11 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
           rel="stylesheet"
         />
