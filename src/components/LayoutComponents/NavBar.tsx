@@ -1,6 +1,7 @@
 "use client";
 
 import { MenuItemsData } from "@/data/MenuItemsData";
+import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function NavBar({
@@ -15,7 +16,7 @@ export default function NavBar({
 
   return (
     <nav
-      className={`caret-transparent sm:flex ${lg_screen_width} ${default_screen_width} bg-navbar backdrop-blur-md text-white h-[98px] my-[48px] rounded-4xl flex-row justify-between   hidden`}
+      className={`z-10 caret-transparent sm:flex ${lg_screen_width} ${default_screen_width} bg-navbar backdrop-blur-md text-white h-[98px] my-[48px] rounded-4xl flex-row justify-between   hidden`}
     >
       <div className="pl-6 w-[350px] flex justify-start items-center">
         <div className=" self-center rounded-4xl p-2 flex justify-center items-center">
@@ -44,9 +45,9 @@ export default function NavBar({
         })}
       </ul>
       <div className="w-[350px] flex justify-end items-center">
-        <button className="bg-carrot-500  mr-12 rounded-4xl px-8 py-4 flex justify-center items-center">
+        <Link href="#pricing_section" className="bg-carrot-500  mr-12 rounded-4xl px-8 py-4 flex justify-center items-center">
           See Pricing
-        </button>
+        </Link>
       </div>
     </nav>
   );

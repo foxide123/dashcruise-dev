@@ -4,10 +4,10 @@ import { useState } from "react";
 
 export default function QASection({
   lg_screen_width,
-  default_screen_width
+  default_screen_width,
 }: {
-  lg_screen_width: string,
-  default_screen_width: string,
+  lg_screen_width: string;
+  default_screen_width: string;
 }) {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
@@ -39,18 +39,21 @@ export default function QASection({
     },
   ];
 
-
   const toggleFAQ = (index: number) => {
     setOpenQuestion(openQuestion === index ? null : index);
   };
 
   return (
-    <div className="caret-transparent flex justify-center w-screen">
-      <div 
-      className={`mt-15 lg:text-start ${lg_screen_width} ${default_screen_width} text-center my-10`}>
-        <h1 className=" font-medium text-5xl leading-15 tracking-tight">
-          Got Questions? We&apos;ve Got Answers!
-        </h1>
+    <div className="bg-white caret-transparent flex justify-center w-screen">
+      <div
+        className={`py-[150px] lg:text-start ${lg_screen_width} ${default_screen_width} text-center`}
+      >
+        <div className="text-center">
+          <h3 className="text-xl font-medium text-carrot-500">Got Questions? We&apos;ve Got Answers!</h3>
+          <h1 className=" font-medium text-5xl leading-15 tracking-tight">
+            Frequently Asked Questions
+          </h1>
+        </div>
 
         {/* FAQ List */}
         <div className=" mt-8 space-y-4">

@@ -22,9 +22,9 @@ export default function ContactUsSection({
   });
 
   return (
-    <div className="caret-transparent mt-5 w-screen flex justify-center mb-30">
+    <div className="bg-white caret-transparent w-screen flex justify-center">
       {/* Wrapper with defined width */}
-      <div className={`mt-10 lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
+      <div className={` lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
 
         {/* Description */}
         <div className="lg:w-[530px] md:text-start text-center">

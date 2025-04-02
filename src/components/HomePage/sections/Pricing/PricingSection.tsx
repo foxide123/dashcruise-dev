@@ -1,8 +1,7 @@
 "use client";
 
-import PricingPlan from "../PricingPlan";
-import { PricingPlans } from "../../../data/PricingData";
-import MeetingSchedule from "@/components/HomePage/MeetingSchedule";
+import PricingPlan from "@/components/HomePage/sections/Pricing/PricingPlan";
+import { PricingPlans } from "@/data/PricingData";
 
 export default function PricingSection({
   lg_screen_width,
@@ -26,26 +25,30 @@ export default function PricingSection({
   ));
 
   return (
-    <div className=" caret-transparent lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto pt-10 pb-36 px-8">
-      <div className="max-w-md mx-auto mb-14 text-center">
-        <h1 className="text-4xl font-semibold mb-6 lg:text-5xl">
-        Choose the Plan that&apos;s Best for Your Business
+    <div id="pricing_section" className="bg-white caret-transparent lg:max-w-screen lg:px-30 max-w-6xl flex flex-col items-center mx-auto py-[150px] px-8">
+      <div className="max-w-[964px] px-10 mx-auto text-center">
+        <h1 className=" lg:text-5xl text-4xl font-semibold">
+          Choose the Plan that&apos;s Perfect for You
         </h1>
-        <p className="text-xl text-gray-500 font-medium">
-        From side hustlers to scaling businesses — find the right tools to grow your online presence
+        <p className="mt-5 text-xl text-gray-500 font-medium">
+          From side hustlers to scaling businesses — find the right tools to
+          grow your online presence
         </p>
+        <div className="mt-8 w-fit mx-auto flex flex-row items-center justify-between">
+          {/*<p className="font-medium text-2xl pr-5 text-carrot-500">Monthly</p>
+          <Switch className="cursor-pointer h-[30px] w-[65px]"/>
+          <p className="font-medium text-2xl pl-5">Yearly</p>
+          */}
+        </div>
       </div>
 
       {/* Available Plans */}
       <div
-        className={`lg:flex-row lg:justify-around ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
+        className={`pt-14 flex-wrap lg:items-start lg:flex-row lg:justify-around ${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
       >
         {pricingComponents}
       </div>
 
-      <p className="my-5 text-2xl font-bold">OR</p>
-
-      <MeetingSchedule />
 
       {/* Blogger Plan 
         <div className="lg:w-full p-8 sm:w-96 w-full flex-1 order-2 bg-white shadow-xl rounded-3xl">

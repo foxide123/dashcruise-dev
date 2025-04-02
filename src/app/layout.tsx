@@ -5,6 +5,7 @@ import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import NavWrapper from "@/components/LayoutComponents/NavWrapper";
+import Footer from "@/components/LayoutComponents/Footer";
 
 config.autoAddCss = false;
 
@@ -30,6 +31,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lg_screen_width = "lg:w-[75vw]";
+  const default_screen_width = "w-[85vw]";
+
   return (
     <html lang="en">
       <head>
@@ -37,15 +41,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.io" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
-          as="style"
-        />
       </head>
       <body className={` antialiased`}>
-        <NavWrapper>{children}</NavWrapper>
-
+        <NavWrapper lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}>{children}</NavWrapper>
+        <Footer lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
         {/* Moving analytics script at the bottom */}
         <Script
           src="https://scripts.simpleanalyticscdn.com/latest.js"

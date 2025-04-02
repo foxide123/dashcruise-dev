@@ -16,27 +16,26 @@ export default function HeroSection({
     /* bg-[url(https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740)] */
   }
   return (
-    <div className="caret-transparent relative w-screen bg-black flex justify-center lg:min-h-[75vh]">
+    <div className="-z-20 bg-black caret-transparent relative w-screen  flex justify-center lg:min-h-[75vh]">
       {/* Background Image: rendered only on Large Screens */}
-      <div className="absolute inset-0 h-full w-full hidden lg:block">
+      <div className="fixed -z-10  inset-0 w-screen h-screen hidden lg:block">
         <Image
-          src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740"
+          src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/22218a4e-1efb-43dd-ff1e-562588e15a00/hd1920x1080"
           alt="hero background"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           priority
           decoding="async"
         />
       </div>
-      ;
       <div
         className={`pb-[48px] ${lg_screen_width} flex ${default_screen_width}`}
       >
         {/* Main Hero Section */}
-        <div className="lg:justify-between lg:flex-row flex flex-col justify-center items-center w-full z-10">
+        <div className="z-10 lg:justify-between lg:flex-row flex flex-col justify-center items-center w-full">
           {/* Launch Your Site */}
           <div className="lg:w-[662px] flex flex-col lg:items-start text-white">
-            <div className="lg:text-7xl lg:leading-[90px] lg:text-start  my-5 text-4xl leading-12 tracking-[-2%] font-bold font-sans text-center">
+            <div className="lg:text-7xl lg:leading-[90px] lg:text-start text-6xl  my-5 leading-[80px] tracking-[-2%] font-bold font-sans text-center">
               <h1>
                 Bring Your
                 <div>
@@ -59,5 +58,5 @@ export default function HeroSection({
         </div>
       </div>
     </div>
-  );
+  )
 }
