@@ -11,10 +11,7 @@ export default function ContainerTextFlipClient(props: any) {
 
   useEffect(() => {
     setIsHydrated(true);
-    const timeout = setTimeout(() => {
-      setStartAnimation(true);
-    }, 2000);
-    return () => clearTimeout(timeout);
+    setStartAnimation(true);
   }, []);
 
   if (!isHydrated || !startAnimation) {
@@ -29,7 +26,5 @@ export default function ContainerTextFlipClient(props: any) {
     );
   }
 
-  return (
-      <ContainerTextFlip {...props} />
-  );
+  return <ContainerTextFlip {...props} />;
 }
