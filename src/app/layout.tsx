@@ -5,6 +5,7 @@ import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import NavWrapper from "@/components/LayoutComponents/NavWrapper";
+import Footer from "@/components/LayoutComponents/Footer";
 
 config.autoAddCss = false;
 
@@ -30,6 +31,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lg_screen_width = "lg:w-[75vw]";
+  const default_screen_width = "w-[85vw]";
+
   return (
     <html lang="en">
       <head>
@@ -44,8 +48,8 @@ export default function RootLayout({
         />
       </head>
       <body className={` antialiased`}>
-        <NavWrapper>{children}</NavWrapper>
-
+        <NavWrapper lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}>{children}</NavWrapper>
+        <Footer lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
         {/* Moving analytics script at the bottom */}
         <Script
           src="https://scripts.simpleanalyticscdn.com/latest.js"

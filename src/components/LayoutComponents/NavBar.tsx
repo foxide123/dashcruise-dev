@@ -1,6 +1,7 @@
 "use client";
 
 import { MenuItemsData } from "@/data/MenuItemsData";
+import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function NavBar({
@@ -44,9 +45,9 @@ export default function NavBar({
         })}
       </ul>
       <div className="w-[350px] flex justify-end items-center">
-        <button className="bg-carrot-500  mr-12 rounded-4xl px-8 py-4 flex justify-center items-center">
+        <Link href="#pricing_section" className="bg-carrot-500  mr-12 rounded-4xl px-8 py-4 flex justify-center items-center">
           See Pricing
-        </button>
+        </Link>
       </div>
     </nav>
   );
