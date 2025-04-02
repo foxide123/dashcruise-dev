@@ -30,8 +30,6 @@ export default function ContainerTextFlipClient(props: any) {
   }
 
   return (
-    <div>
       <ContainerTextFlip {...props} />
-    </div>
   );
 }
