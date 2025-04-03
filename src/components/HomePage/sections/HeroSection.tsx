@@ -27,6 +27,8 @@ export default function HeroSection({
           objectFit="cover"
           priority
           decoding="async"
+          placeholder="blur"
+          blurDataURL="/bg_image_train_mountains.jpg"
         />
       </div>
       <div

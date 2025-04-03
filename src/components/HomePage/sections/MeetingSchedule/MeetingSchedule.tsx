@@ -13,7 +13,7 @@ export default function MeetingSchedule() {
           width="100%"
           loading="lazy"
           title="Schedule Google Meeting"
-          className="border-0 lg:h-[900px] p-10 "
+          className="lg:h-[900px] lg:p-0 h-[500px] border-0 p-10 "
         ></iframe>
       </a>
     </div>
