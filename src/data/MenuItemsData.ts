@@ -7,7 +7,7 @@ export const MenuItemsData = [
         name: "Blog",
         pathname: "/blog"
     },
-    {
+   /*  {
         name: "Pages",
         pathname: "/pages",
         nested: [
@@ -18,5 +18,5 @@ export const MenuItemsData = [
                 pathname: "/page2"
             }
         ]
-    }
+    } */
 ]
