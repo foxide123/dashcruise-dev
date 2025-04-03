@@ -20,7 +20,7 @@ export default function NavWrapper({
   return (
     <>
       {!hideNav && (
-        <div className=" w-screen flex justify-center">
+        <div className="lg:bg-transparent bg-black w-screen flex justify-center">
           <NavBar
             lg_screen_width={lg_screen_width}
             default_screen_width={default_screen_width}
