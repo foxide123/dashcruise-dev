@@ -28,6 +28,11 @@ export default function Document() {
           as="image"
           type="image/x-icon"
         />
+        <link
+          rel="preload"
+          as="image"
+          href="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/22218a4e-1efb-43dd-ff1e-562588e15a00/hd1920x1080"
+        />
       </Head>
       <body>
         <Main />
