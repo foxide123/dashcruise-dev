@@ -51,6 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="https://dashcruisedev.com/og-image.png" />
         <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
         <link
           rel="apple-touch-icon"
