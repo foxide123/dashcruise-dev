@@ -24,7 +24,7 @@ export default function Document() {
         {/* Preload critical assets */}
         <link
           rel="preload"
-          href="/favicon.ico"
+          href="/favicon.ico?v=2"
           as="image"
           type="image/x-icon"
         />
