@@ -1,17 +1,11 @@
-import HeroSection from "@/components/HomePage/sections/HeroSection";
-
-import ComparisonSection from "@/components/HomePage/sections/ComparisonSection";
-
-import HighlightSection from "@/components/HomePage/sections/HighlightSection";
-
-import PricingSection from "@/components/HomePage/sections/Pricing/PricingSection";
-
-import ClientOnly from "@/components/ClientOnly";
-
-import QAWrapper from "@/components/HomePage/sections/QA/QAWrapper";
-import PortfolioSection from "@/components/HomePage/sections/PortfolioSection";
-import MeetingScheduleSection from "@/components/HomePage/sections/MeetingSchedule/MeetingScheduleSection";
-import ContactUsSection from "@/components/HomePage/sections/ContactUs/ContactUsSection";
+import HeroSection from "@/components/sections/Hero";
+import ComparisonSection from "@/components/sections/Comparison";
+import HighlightSection from "@/components/sections/Highlight";
+import PortfolioSection from "@/components/sections/Portfolio";
+import ContactUsSection from "@/components/sections/ContactUs";
+import PricingSection from "@/components/sections/Pricing";
+import MeetingScheduleSection from "@/components/sections/MeetingSchedule";
+import QASection from "@/components/sections/QA";
 
 export default function Home() {
   const lg_screen_width = "lg:w-[75vw]";
@@ -36,7 +30,10 @@ export default function Home() {
         default_screen_width="w-[85vw]"
       />
 
-      <ContactUsSection lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
+      <ContactUsSection
+        lg_screen_width={lg_screen_width}
+        default_screen_width={default_screen_width}
+      />
       <PricingSection
         lg_screen_width={lg_screen_width}
         default_screen_width={default_screen_width}
@@ -45,12 +42,10 @@ export default function Home() {
         lg_screen_width={lg_screen_width}
         default_screen_width={default_screen_width}
       />
-      <ClientOnly>
-        <QAWrapper
-          lg_screen_width={lg_screen_width}
-          default_screen_width={default_screen_width}
-        />
-      </ClientOnly>
+      <QASection
+        lg_screen_width={lg_screen_width}
+        default_screen_width={default_screen_width}
+      />
       {/*  <CookieBanner />*/}
     </div>
   );

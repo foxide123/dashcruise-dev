@@ -1,4 +1,4 @@
-import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
+import ExclusivePlan from "@/components/sections/Hero/ExclusivePlan";
 import Image from "next/image";
 
 import ContainerTextFlipClient from "@/components/ui/ui_containers/ContainerTextFlipClient";

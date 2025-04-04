@@ -1,7 +1,7 @@
 "use client";
 
 import { IconSizeEnum } from "@/types/icon_types";
-import SubscribeButton from "../SubscribeButton";
+import SubscribeButton from "@/components/subscribe/SubscribeButton";
 import CheckIcon from "@/components/icons/CheckIcon";
 
 export default function ExclusivePlan() {

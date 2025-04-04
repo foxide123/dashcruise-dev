@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { handleFormSubmition } from "@/app/actions";
-import PopupModal from "@/components/PopupModal";
+import PopupModal from "@/components/modals/PopupModal";
 
 export default function ContactUsForm() {
     const [showPopup, setShowPopup] = useState(false);

@@ -4,8 +4,8 @@ import Script from "next/script";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import NavWrapper from "@/components/LayoutComponents/NavWrapper";
-import Footer from "@/components/LayoutComponents/Footer";
+import NavWrapper from "@/components/layout/NavWrapper";
+import Footer from "@/components/layout/Footer";
 
 config.autoAddCss = false;
 
