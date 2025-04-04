@@ -23,6 +23,16 @@ export const metadata: Metadata = {
     title: "DashcruiseDev - Web Design & Development",
     description:
       "Modern websites crafted with performance and user experience in mind",
+      siteName: "DashcruiseDev",
+    images: [
+      {
+        url: "/og-iamge.png",
+        width: 1200,
+        height: 630,
+        alt: "DashcruiseDev Preview Image"
+      }
+    ],
+    type: "website"
   },
 };
 
