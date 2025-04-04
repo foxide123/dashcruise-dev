@@ -1,5 +1,5 @@
-import CheckIcon from "../../../icons/CheckIcon";
-import SubscribeButton from "../../../SubscribeButton";
+import CheckIcon from "@/components/icons/CheckIcon";
+import SubscribeButton from "@/components/subscribe/SubscribeButton";
 import Image from "next/image";
 
 type PricingFeatureProp = {

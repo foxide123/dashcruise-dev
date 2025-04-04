@@ -20,7 +20,7 @@ export default function PopupModal({
   }, [onClose]);
 
   return (
-    <div className="fixed z-50 top-0 left-0 w-full h-ful flex justify-center items-center">
+    <div className="fixed z-50 top-0 left-0 w-full h-full flex justify-center items-center">
       <div
         id="modal-content"
         className="bg-white p-5 rounded-lg shadow-lg w-4/5 max-w-md relative"

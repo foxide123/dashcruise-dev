@@ -1,12 +1,10 @@
-"use client";
-
 import { IconSizeEnum } from "@/types/icon_types";
-import SubscribeButton from "../SubscribeButton";
+import SubscribeButton from "@/components/subscribe/SubscribeButton";
 import CheckIcon from "@/components/icons/CheckIcon";
 
 export default function ExclusivePlan() {
   return (
-    <div className="lg:w-[640px] lg:h-[480px] lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
+    <div className="z-20 lg:w-[640px] lg:h-[480px] lg:my-0 w-full my-5 bg-blur-500/90 backdrop-blur-md p-6 rounded-[1.25rem] flex items-center justify-center text-white border-[1px] border-carrot-600">
       <div>
         <h1 className="text-2xl font-medium leading-8 space-y-6">
           Exclusive Plan
@@ -36,7 +34,7 @@ export default function ExclusivePlan() {
             Hosting & Domain & Business Email
           </li>
         </ul>
-        <div className="mt-10">
+        <div className="mt-10 cursor-pointer">
           <SubscribeButton customAmount="49"/>
         </div>
       </div>

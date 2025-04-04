@@ -1,6 +1,4 @@
-"use client";
-
-import PricingPlan from "@/components/HomePage/sections/Pricing/PricingPlan";
+import PricingPlan from "@/components/sections/Pricing/PricingPlan";
 import { PricingPlans } from "@/data/PricingData";
 
 export default function PricingSection({

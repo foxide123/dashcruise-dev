@@ -1,4 +1,4 @@
-import ExclusivePlan from "@/components/HomePage/ExclusivePlan";
+import ExclusivePlan from "@/components/sections/Hero/ExclusivePlan";
 import Image from "next/image";
 
 import ContainerTextFlipClient from "@/components/ui/ui_containers/ContainerTextFlipClient";
@@ -17,7 +17,8 @@ export default function HeroSection({
     /* bg-[url(https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740)] */
   }
   return (
-    <div className="-z-20 bg-black caret-transparent relative w-screen  flex justify-center lg:min-h-[75vh]">
+    <div className="relative caret-transparent relative w-screen  flex justify-center lg:min-h-[75vh]">
+      <div className="absolute inset-0 bg-black z-[-1] lg:hidden" />
       {/* Background Image: rendered only on Large Screens */}
       <div className="fixed -z-10  inset-0 w-screen h-screen hidden lg:block">
         <Image
