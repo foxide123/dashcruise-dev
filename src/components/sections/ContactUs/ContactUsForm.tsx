@@ -1,19 +1,25 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { handleFormSubmition } from "@/app/actions";
 import PopupModal from "@/components/modals/PopupModal";
 
-export default function ContactUsForm() {
-    const [showPopup, setShowPopup] = useState(false);
-    const [pending, setPending] = useState(false);
-    const [formValues, setFormValues] = useState({
-      name: "",
-      email: "",
-      message: "",
-    });
+export default function ContactUsForm({
+  padding,
+  marginTop,
+}: {
+  padding?: string;
+  marginTop?: string;
+}) {
+  const [showPopup, setShowPopup] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   return (
-    <div className={`lg:w-[747px] lg:mt-0 mt-10 rounded-lg`}>
+    <div className={`lg:w-[747px] ${marginTop} rounded-lg`}>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
@@ -33,7 +39,7 @@ export default function ContactUsForm() {
             // You could also show a toast or inline error here
           }
         }}
-        className="flex flex-col p-10"
+        className={`flex flex-col ${padding}`}
       >
         <input
           type="text"

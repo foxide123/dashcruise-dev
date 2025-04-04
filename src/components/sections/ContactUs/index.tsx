@@ -27,8 +27,7 @@ export default function ContactUsSection({
             possible with all of the informations and answers to your questions.
           </p>
         </div>
-
-        <ContactUsForm />
+          <ContactUsForm padding="p-10" marginTop="lg:mt-0 mt-10"/>
       </div>
     </div>
   );

@@ -7,6 +7,10 @@ export const MenuItemsData = [
         name: "Blog",
         pathname: "/blog"
     },
+    {
+        name: "Contact",
+        pathname: "/contact"
+    }
    /*  {
         name: "Pages",
         pathname: "/pages",
