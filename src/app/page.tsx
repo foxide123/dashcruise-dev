@@ -9,9 +9,9 @@ import PricingSection from "@/components/HomePage/sections/Pricing/PricingSectio
 import ClientOnly from "@/components/ClientOnly";
 
 import QAWrapper from "@/components/HomePage/sections/QA/QAWrapper";
-import ContactUsWrapper from "@/components/HomePage/sections/ContactUs/ContactUsWrapper";
 import PortfolioSection from "@/components/HomePage/sections/PortfolioSection";
 import MeetingScheduleSection from "@/components/HomePage/sections/MeetingSchedule/MeetingScheduleSection";
+import ContactUsSection from "@/components/HomePage/sections/ContactUs/ContactUsSection";
 
 export default function Home() {
   const lg_screen_width = "lg:w-[75vw]";
@@ -36,12 +36,7 @@ export default function Home() {
         default_screen_width="w-[85vw]"
       />
 
-      <ClientOnly>
-        <ContactUsWrapper
-          lg_screen_width={lg_screen_width}
-          default_screen_width={default_screen_width}
-        />
-      </ClientOnly>
+      <ContactUsSection lg_screen_width={lg_screen_width} default_screen_width={default_screen_width}/>
       <PricingSection
         lg_screen_width={lg_screen_width}
         default_screen_width={default_screen_width}

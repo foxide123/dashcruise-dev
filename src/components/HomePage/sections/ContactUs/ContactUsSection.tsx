@@ -1,8 +1,4 @@
-"use client";
-
-import { handleFormSubmition } from "@/app/actions";
-import PopupModal from "@/components/PopupModal";
-import { useState } from "react";
+import ContactUsForm from "./ContactUsForm";
 
 type ContactUsProps = {
   lg_screen_width: string;
@@ -13,19 +9,12 @@ export default function ContactUsSection({
   lg_screen_width,
   default_screen_width,
 }: ContactUsProps) {
-  const [showPopup, setShowPopup] = useState(false);
-  const [pending, setPending] = useState(false);
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   return (
     <div className="bg-white caret-transparent w-screen flex justify-center">
       {/* Wrapper with defined width */}
-      <div className={` lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}>
-
+      <div
+        className={` lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}
+      >
         {/* Description */}
         <div className="lg:w-[530px] md:text-start text-center">
           <h2 className="text-carrot-500 text-sm leading-5 mb-2">Contact Us</h2>
@@ -34,78 +23,12 @@ export default function ContactUsSection({
             connect with you!
           </h1>
           <p className="text-base leading-6 mt-4">
-            Please fill out the contact form and we will contact you as soon as possible with all of the informations and answers to your questions.
+            Please fill out the contact form and we will contact you as soon as
+            possible with all of the informations and answers to your questions.
           </p>
         </div>
 
-        {/* Contact Form */}
-        <div
-          className={`lg:w-[747px] lg:mt-0 mt-10 rounded-lg`}
-        >
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              setPending(true);
-
-              const formData = new FormData(e.currentTarget);
-
-              const result = await handleFormSubmition(formData);
-              setPending(false);
-              if (result?.success) {
-                setShowPopup(true);
-                console.log("Setting show popup to true");
-                setFormValues({ name: "", email: "", message: "" });
-                setTimeout(() => setShowPopup(false), 3000);
-              } else if (result?.error) {
-                console.error("Validation or server error:", result.error);
-                // You could also show a toast or inline error here
-              }
-            }}
-            className="flex flex-col p-10"
-          >
-            <input
-              type="text"
-              id="nameInput"
-              name="name"
-              value={formValues.name}
-              onChange={(e) =>
-                setFormValues({ ...formValues, name: e.target.value })
-              }
-              required
-              placeholder="Name"
-              className="border-1 p-5 outline-none rounded-md"
-            />
-            <input
-              type="email"
-              id="emailInput"
-              name="email"
-              required
-              value={formValues.email}
-              onChange={(e) =>
-                setFormValues({ ...formValues, email: e.target.value })
-              }
-              placeholder="Email"
-              className="border-1 mt-5 p-5 outline-none rounded-md"
-            />
-            <textarea
-              name="message"
-              required
-              value={formValues.message}
-              onChange={(e) =>
-                setFormValues({ ...formValues, message: e.target.value })
-              }
-              placeholder="Message"
-              className="border-1 mt-5 p-5 h-50 outline-none rounded-md"
-            />
-            <button
-              type="submit"
-              className="w-[215px] cursor-pointer text-base font-bold leading-6 rounded-4xl bg-carrot-500 text-white mt-5 p-5"
-            >
-              {pending ? "Sending Message..." : "Send Message"}
-            </button>
-            {showPopup && <PopupModal onClose={() => setShowPopup(false)} />}
-          </form>
-        </div>
+        <ContactUsForm />
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-"use client";
-
 import PricingPlan from "@/components/HomePage/sections/Pricing/PricingPlan";
 import { PricingPlans } from "@/data/PricingData";
 
