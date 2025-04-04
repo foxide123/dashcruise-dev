@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       siteName: "DashcruiseDev",
     images: [
       {
-        url: "/og-iamge.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "DashcruiseDev Preview Image"
@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     ],
     type: "website"
   },
+  other: {
+    "og:image": "https://dashcruisedev.com/og-image.png"
+  }
 };
 
 export default function RootLayout({
