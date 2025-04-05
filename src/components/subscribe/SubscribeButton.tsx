@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
@@ -13,7 +13,6 @@ export default function SubscribeButton({
 }: {
   customAmount: string;
 }) {
-
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -41,18 +40,20 @@ export default function SubscribeButton({
       const stripe = await stripePromise;
       await stripe?.redirectToCheckout({ sessionId: data.sessionId });
     } catch (error) {
-     console.error(error);
+      console.error(error);
     }
     setLoading(false);
   };
 
   return (
-    <button
-      onClick={handleCheckout}
-      disabled={loading}
-      className="flex justify-center items-center bg-carrot-500 rounded-xl py-6 px-4 text-center text-white text-2xl w-full cursor-pointer"
-    >
-      {loading ? "Processing..." : "Subscribe"}
-    </button>
+    <div>
+      <button
+        onClick={handleCheckout}
+        disabled={loading}
+        className="flex justify-center items-center bg-carrot-500 rounded-xl py-6 px-4 text-center text-white text-2xl w-full cursor-pointer"
+      >
+        {loading ? "Processing..." : "Subscribe"}
+      </button>
+    </div>
   );
 }
