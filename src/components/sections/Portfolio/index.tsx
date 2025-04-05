@@ -21,7 +21,7 @@ export default function PortfolioSection({
           <div className="lg:mt-[58px] mt-[20px] highlight-container-custom">
             <div className="relative overflow-hidden lg:w-[400px] lg:h-[400px] rounded-2xl object-cover w-[200px] h-[200px] mx-auto">
               <Image
-                src="/portfolio_picture1.png"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/236846ed-3356-4bb7-6094-a0eb79b59f00/card600x400"
                 layout="fill"
                 style={{objectFit: "cover"}}
                 alt="Portfolio Picture"
@@ -38,7 +38,7 @@ export default function PortfolioSection({
           <div className="mt-[58px] highlight-container-custom">
             <div className="relative overflow-hidden lg:w-[400px] lg:h-[400px] rounded-2xl object-cover w-[200px] h-[200px] mx-auto">
               <Image
-                src="/portfolio_picture2.png"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/236846ed-3356-4bb7-6094-a0eb79b59f00/card600x400"
                 layout="fill"
                 objectFit="cover"
                 alt="Portfolio Picture"
@@ -55,7 +55,7 @@ export default function PortfolioSection({
           <div className="mt-[58px] highlight-container-custom">
             <div className="relative overflow-hidden lg:w-[400px] lg:h-[400px] rounded-2xl object-cover w-[200px] h-[200px] mx-auto">
               <Image
-                src="/portfolio_picture3.png"
+                src="https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/236846ed-3356-4bb7-6094-a0eb79b59f00/card600x400"
                 layout="fill"
                 style={{objectFit: "cover"}}
                 alt="Portfolio Picture"
