@@ -21,8 +21,13 @@ export default function CountrySelectionModal() {
 
   return (
     <Popover>
-      <PopoverTrigger>
-        <button className="cursor-pointer flex">{`${language.toUpperCase()} / ${currency.toUpperCase()}`} <span className="pl-2 pt-0.5"><ArrowDown className="w-5"/></span></button>
+      <PopoverTrigger asChild>
+        <button type="button" className="cursor-pointer flex">
+          {`${language.toUpperCase()} / ${currency.toUpperCase()}`}{" "}
+          <span className="pl-2 pt-0.5">
+            <ArrowDown className="w-5" />
+          </span>
+        </button>
       </PopoverTrigger>
       <PopoverContent className="flex flex-col justify-center items-center">
         {/* Language Selection */}
