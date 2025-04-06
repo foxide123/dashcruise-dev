@@ -1,59 +1,43 @@
-/* import { MoveRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
- */
+import { getMessages, setRequestLocale } from "next-intl/server";
 
-export const runtime = 'edge';
+type PostParams = {
+  title: string;
+  description: string;
+};
 
-export default function Blog() {
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const awaitedParams = await params;
+  const locale = awaitedParams.locale;
+  setRequestLocale(locale);
+  const messages = await getMessages();
+  const postPreviews: PostParams[] = messages.postPreviews;
+
+  const lg_screen_width = "lg:w-[75vw]";
+  const default_screen_width = "w-[85vw]";
+
   return (
-    <div className="caret-transparent w-full py-20 lg:py-40 min-h-[100vh]">
-      <div className="container mx-auto flex flex-col gap-14">
-        <div className="flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
-          <h4 className="font-regular max-w-xl text-3xl tracking-tighter md:text-5xl">
-            Latest articles
-          </h4>
-         {/*  <Button className="gap-4 cursor-pointer">
-            View all articles <MoveRight className="h-4 w-4" />
-          </Button> */}
+    <div className="caret-transparent w-screen py-20 lg:py-40 min-h-[100vh]">
+      <div
+        className={`border-2 border-green-500 ${lg_screen_width} ${default_screen_width} container mx-auto flex flex-col gap-14`}
+      >
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {postPreviews.map((post: PostParams, index:number) => {
+            {/* Individual Post */}
+            return (
+              <div key={index} className="flex cursor-pointer flex-col gap-2 hover:opacity-75">
+                <div className="mb-4 aspect-video rounded-md bg-muted"></div>
+                <h3 className="text-xl tracking-tight">{post.title}</h3>
+                <p className="text-base text-muted-foreground">
+                  {post.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
-        <div>
-          No Articles Published Yet
-        </div>
-
-{/*         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex cursor-pointer flex-col gap-2 hover:opacity-75">
-            <div className="mb-4 aspect-video rounded-md bg-muted"></div>
-            <h3 className="text-xl tracking-tight"></h3>
-            <p className="text-base text-muted-foreground">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex cursor-pointer flex-col gap-2 hover:opacity-75">
-            <div className="mb-4 aspect-video rounded-md bg-muted"></div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-base text-muted-foreground">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex cursor-pointer flex-col gap-2 hover:opacity-75">
-            <div className="mb-4 aspect-video rounded-md bg-muted"></div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-base text-muted-foreground">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex cursor-pointer flex-col gap-2 hover:opacity-75">
-            <div className="mb-4 aspect-video rounded-md bg-muted"></div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-base text-muted-foreground">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-        </div> */}
       </div>
     </div>
   );

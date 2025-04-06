@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { MenuItemsData } from "@/data/MenuItemsData";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import CountrySelectionModal from '@/components/modals/CountrySelectionModal';
+import CountrySelectionModal from "@/components/modals/CountrySelectionModal";
 
 export default function NavBar({
   lg_screen_width,
@@ -34,9 +34,16 @@ export default function NavBar({
       </div>
       <ul className="flex flex-row items-center text-xl font-semibold cursor-pointer">
         {MenuItemsData.map((item) => {
-          const fullPath = `/${locale}${item.pathname}`;
+          const fullPath = `/${locale}${item.pathname === "/" ? "" : item.pathname}`;
+          const currentPath = pathname!.endsWith("/")
+            ? pathname!.slice(0, -1)
+            : pathname;
+          const comparePath = fullPath.endsWith("/")
+            ? fullPath.slice(0, -1)
+            : fullPath;
           const isActive =
-            fullPath === pathname ? "text-carrot-500" : "text-white";
+            currentPath === comparePath ? "text-carrot-500" : "text-white";
+
           return (
             <li
               key={item.name}
@@ -47,7 +54,10 @@ export default function NavBar({
             </li>
           );
         })}
-        <li><CountrySelectionModal/></li>
+
+        <li>
+          <CountrySelectionModal />
+        </li>
       </ul>
       <div className="w-[350px] flex justify-end items-center">
         <Link
