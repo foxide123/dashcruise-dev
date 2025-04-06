@@ -19,7 +19,7 @@ export default function NavBar({
 
   return (
     <nav
-      className={`z-10 caret-transparent sm:flex ${lg_screen_width} ${default_screen_width} bg-navbar backdrop-blur-md text-white h-[98px] my-[48px] rounded-4xl flex-row justify-between items-center hidden`}
+      className={`z-10 caret-transparent sm:flex bg-navbar backdrop-blur-md text-white h-[98px] my-[48px] rounded-4xl flex-row justify-between items-center hidden  ${lg_screen_width} ${default_screen_width}`}
     >
       <div className="pl-6 w-[350px] flex justify-start items-center">
         <div className=" self-center rounded-4xl p-2 flex justify-center items-center">

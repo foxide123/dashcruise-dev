@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div className="w-full h-full bg-white flex justify-center items-center">
       <div
-        className={`${lg_screen_width} ${default_screen_width} flex flex-col justify-center items-center`}
+        className={`flex flex-col justify-center items-center ${lg_screen_width} ${default_screen_width}`}
       >
         <div className="lg:w-fit w-full p-10 mb-24">
           <h1 className="font-normal text-[40px]">Contact Us</h1>

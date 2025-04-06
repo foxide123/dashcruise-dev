@@ -38,7 +38,7 @@ export default function HighlightSection({
               width={130}
               height={43}
               alt="Cloudflare Logo"
-              className="lg:mx-0 lg:mb-0 mb-10 mx-auto"
+              className="lg:mx-0 lg:mb-0 mx-auto"
             />
         </div>
         {/* Highlight Images */}

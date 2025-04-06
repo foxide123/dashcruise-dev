@@ -18,7 +18,7 @@ export default function PortfolioSection({
   return (
     <div className="bg-white caret-transparent flex justify-center w-screen ">
       <div
-        className={`lg:py-[150px] pt-[70px] pb-[80px] lg:text-start ${lg_screen_width} ${default_screen_width} text-center py-5`}
+        className={`lg:py-[150px] lg:text-start ${lg_screen_width} ${default_screen_width} text-center py-10`}
       >
         <h1 className="font-medium text-5xl leading-15 mb-6 tracking-tight">
           {portfolioData("header")}

@@ -14,7 +14,7 @@ export default function MeetingScheduleSection({
   return (
     <div className="bg-white w-screen flex items-center justify-center">
       <div
-        className={`lg:px-20 ${lg_screen_width} ${default_screen_width} flex flex-col items-center justify-center`}
+        className={`lg:px-20 lg:py0 py-10 flex flex-col items-center justify-center ${lg_screen_width} ${default_screen_width}`}
       >
         {/* Header with description */}
         <div className="flex flex-col items-center justify-centertext-center text-center">

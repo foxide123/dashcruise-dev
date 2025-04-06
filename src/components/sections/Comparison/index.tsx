@@ -13,7 +13,7 @@ export default function ComparisonSection({
   return (
     <div className="caret-transparent lg:text-start text-center flex justify-center w-screen bg-white">
       <div
-        className={` ${lg_screen_width} lg:mb-0 lg:pt-[152px] lg:pb-[152px] ${default_screen_width} mb-10 text-black`}
+        className={`lg:mb-0 lg:pt-[152px] lg:pb-[152px] pb-10 text-black ${lg_screen_width} ${default_screen_width}`}
       >
         {/* Build Faster Section */}
         <div className="">
