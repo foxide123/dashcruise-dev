@@ -9,7 +9,9 @@ import QASection from "@/components/sections/QA";
 
 import { getMessages, setRequestLocale } from "next-intl/server";
 
-export const runtime = 'edge';
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'de' }];
+}
 
 export default async function Home({params}: {params: Promise<{locale:string}>}) {
 
