@@ -23,7 +23,6 @@ export const CountryProvider = ({
   const pathname = usePathname();
 
   useEffect(() => {
-    const savedLocale = getCookie("locale");
     const savedCurrency = getCookie("currency");
 
     // Fallback to URL-based locale
