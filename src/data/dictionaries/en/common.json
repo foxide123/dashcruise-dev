@@ -15,7 +15,7 @@
     },
     "pricingPlan": [
       {
-        "header": "🌱 Startup 🌱",
+        "name": "🌱 Startup 🌱",
         "price": "49",
         "additionalPagePrice": "9",
         "description": "Perfect for new businesses or solo professionals who just need a solid online presence",
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "header": "✨ Standard ✨",
+        "name": "✨ Standard ✨",
         "price": "79",
         "additionalPagePrice": "9",
         "description": "Ideal for growing businesses that want a custom site, better visibility, and peace of mind",
