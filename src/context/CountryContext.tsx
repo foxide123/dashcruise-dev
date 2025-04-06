@@ -28,15 +28,14 @@ export const CountryProvider = ({
 
     // Fallback to URL-based locale
     const localeFromPath = pathname?.split("/")[1];
-    const resolvedLocale = savedLocale || localeFromPath;
 
-    if (resolvedLocale === 'de') setLanguage("🇩🇪 de");
+    if (localeFromPath === 'de') setLanguage("🇩🇪 de");
     else setLanguage("🇺🇸 en");
 
     if (savedCurrency) {
       setCurrency(savedCurrency as string);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <CountryContext.Provider
