@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 
 export default function HighlightSection({
   lg_screen_width,
@@ -7,6 +8,9 @@ export default function HighlightSection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
+
+  const highlightData = useTranslations("highlight");
+
   return (
     <div className="caret-transparent xl:text-start lg:text-center text-center flex flex-row justify-center bg-magenta-500  w-screen">
       <div
@@ -16,16 +20,16 @@ export default function HighlightSection({
         <div className="lg:px-10 lg:w-1/2 flex flex-col px-10">
           <div>
             <h1 className=" lg:text-start font-medium text-5xl leading-15 tracking-tight text-center">
-              Boost Your Business with <br />
+              {
+              highlightData.raw("header").map((text:string, index:string) => (
+               <div key={index}>{text}</div>
+              ))}
+              {/* Boost Your Business with <br />
               Unmatched Speed and <br />
-              Security
+              Security */}
             </h1>
             <p className="lg:pr-10 font-normal text-base leading-6 my-6 pr-0">
-              Enjoy peace of mind with 24/7 security and uninterrupted service,
-              ensuring your website is always trusted and reliable. With the DoS
-              protection, SSL encryption, intelligent caching you can sleep safe
-              knowing your website will be fast and secure. Upgrade your web
-              presence with us - where speed meets security!
+              {highlightData("description")}
             </p>
           </div>
             <Image

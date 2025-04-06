@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -11,13 +13,33 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useState } from "react";
 
 import { ArrowDown } from "lucide-react";
+import { useCountry } from "@/context/CountryContext";
+import { setCookie } from "cookies-next";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function CountrySelectionModal() {
-  const [language, setLanguage] = useState("🇺🇸 en");
-  const [currency, setCurrency] = useState("usd");
+  const { language, currency, setLanguage, setCurrency } = useCountry();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleCurrencyChange = (value: string) => {
+    setCurrency(value);
+    setCookie("currency", value, { path: "/" });
+  };
+
+  const handleSave = () => {
+    const newLocale = language.split(" ")[1]; // from "🇩🇪 de" → "de"
+    const currentPathWithoutLocale = pathname!.replace(/^\/(en|de)/, ""); // remove existing locale from path
+
+    // Save cookie
+    setCookie("currency", currency, { path: "/" });
+    setCookie("locale", newLocale, { path: "/" });
+
+    // Navigate to new locale route
+    router.push(`/${newLocale}${currentPathWithoutLocale}`);
+  };
 
   return (
     <Popover>
@@ -47,9 +69,9 @@ export default function CountrySelectionModal() {
         {/* Currency Selection */}
         <div>
           <p className="text-sm mb-1 font-medium">Currency</p>
-          <Select value={currency} onValueChange={setCurrency}>
+          <Select value={currency} onValueChange={handleCurrencyChange}>
             <SelectTrigger className="w-[180px]">
-              <SelectValue />
+            <SelectValue />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="usd">USD</SelectItem>
@@ -57,6 +79,12 @@ export default function CountrySelectionModal() {
             </SelectContent>
           </Select>
         </div>
+        <button
+          className="bg-carrot-400 py-3 px-10 mt-4 rounded-2xl cursor-pointer"
+          onClick={handleSave}
+        >
+          Save
+        </button>
       </PopoverContent>
     </Popover>
   );

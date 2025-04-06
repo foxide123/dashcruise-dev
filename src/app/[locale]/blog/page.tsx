@@ -1,6 +1,9 @@
 /* import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
  */
+
+export const runtime = 'edge';
+
 export default function Blog() {
   return (
     <div className="caret-transparent w-full py-20 lg:py-40 min-h-[100vh]">

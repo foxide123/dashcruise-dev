@@ -1,7 +1,8 @@
-import ExclusivePlan from "@/components/sections/Hero/ExclusivePlan";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import ContainerTextFlipClient from "@/components/ui/ui_containers/ContainerTextFlipClient";
+import ExclusivePlanWrapper from "./ExclusivePlanWrapper";
 
 
 export default function HeroSection({
@@ -16,8 +17,11 @@ export default function HeroSection({
   {
     /* bg-[url(https://imagedelivery.net/Ap_RIQMnvK_LYOq1vIFisQ/6e425c1c-6c9b-48eb-c8fa-0a4ba4faf200/section1440x740)] */
   }
+  const heroData = useTranslations('hero');
+
+  
   return (
-    <div className="relative caret-transparent relative w-screen  flex justify-center lg:min-h-[75vh]">
+    <div className="relative caret-transparent w-screen  flex justify-center lg:min-h-[75vh]">
       <div className="absolute inset-0 bg-black z-[-1] lg:hidden" />
       {/* Background Image: rendered only on Large Screens */}
       <div className="fixed -z-10  inset-0 w-screen h-screen hidden lg:block">
@@ -41,13 +45,13 @@ export default function HeroSection({
           <div className="lg:w-[662px] flex flex-col lg:items-start text-white">
             <div className="lg:text-7xl lg:leading-[90px] lg:text-start text-6xl  my-5 leading-[80px] tracking-[-2%] font-bold font-sans text-center">
               <h1>
-                Bring Your
+                {heroData("headerBeforeEffect")}
                 <div>
                   <ContainerTextFlipClient
-                    words={["Idea", "Brand", "Project", "Portfolio", "Story"]}
+                    words={heroData.raw("headerEffect")}
                   />
                 </div>{" "}
-                Online
+                {heroData("headerAfterEffect")}
               </h1>
               <div></div>
             </div>
@@ -58,7 +62,7 @@ export default function HeroSection({
             </p> */}
           </div>
 
-          <ExclusivePlan />
+          <ExclusivePlanWrapper />
         </div>
       </div>
     </div>

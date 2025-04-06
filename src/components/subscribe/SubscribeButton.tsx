@@ -8,10 +8,15 @@ import { useRouter } from "next/navigation";
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
 );
-export default function SubscribeButton({
+export default function 
+SubscribeButton({
   customAmount,
+  text,
+  currency
 }: {
   customAmount: string;
+  text:string;
+  currency: string;
 }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -27,7 +32,7 @@ export default function SubscribeButton({
       const response = await fetch("/api/checkout_sessions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: customAmount }),
+        body: JSON.stringify({ amount: customAmount, currency: currency }),
       });
 
       const data = (await response.json()) as CheckoutApiResponse;
@@ -52,7 +57,7 @@ export default function SubscribeButton({
         disabled={loading}
         className="flex justify-center items-center bg-carrot-500 rounded-xl py-6 px-4 text-center text-white text-2xl w-full cursor-pointer"
       >
-        {loading ? "Processing..." : "Subscribe"}
+        {loading ? "Processing..." : text}
       </button>
     </div>
   );
