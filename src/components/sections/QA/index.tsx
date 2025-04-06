@@ -14,7 +14,7 @@ export default function QASection({
   return (
     <div className="bg-white caret-transparent flex justify-center w-screen">
       <div
-        className={`py-[150px] lg:text-start ${lg_screen_width} ${default_screen_width} text-center`}
+        className={`lg:py-[150px] lg:text-start py-10 text-center ${lg_screen_width} ${default_screen_width}`}
       >
         <div className="text-center">
           <h3 className="text-xl font-medium text-carrot-500">

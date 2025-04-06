@@ -15,7 +15,7 @@ export default function ContactUsSection({
     <div className="bg-white caret-transparent w-screen flex justify-center">
       {/* Wrapper with defined width */}
       <div
-        className={` lg:justify-between lg:flex-row  flex flex-col  ${lg_screen_width} ${default_screen_width}`}
+        className={`lg:justify-between lg:flex-row lg:py-0 py-10  flex flex-col  ${lg_screen_width} ${default_screen_width}`}
       >
         {/* Description */}
         <div className="lg:w-[530px] md:text-start text-center">
@@ -29,7 +29,7 @@ export default function ContactUsSection({
            {contactUsData("description")}
           </p>
         </div>
-        <ContactUsForm padding="p-10" marginTop="lg:mt-0 mt-10" />
+        <ContactUsForm padding="lg:p-10 p-0" marginTop="lg:mt-0 mt-10" />
       </div>
     </div>
   );
