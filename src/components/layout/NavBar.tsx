@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { MenuItemsData } from "@/data/MenuItemsData";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
@@ -14,6 +15,7 @@ export default function NavBar({
 }) {
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
 
   return (
     <nav
@@ -32,8 +34,9 @@ export default function NavBar({
       </div>
       <ul className="flex flex-row items-center text-xl font-semibold cursor-pointer">
         {MenuItemsData.map((item) => {
+          const fullPath = `/${locale}${item.pathname}`;
           const isActive =
-            item.pathname === pathname ? "text-carrot-500" : "text-white";
+            fullPath === pathname ? "text-carrot-500" : "text-white";
           return (
             <li
               key={item.name}

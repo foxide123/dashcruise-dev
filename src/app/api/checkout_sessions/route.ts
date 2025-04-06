@@ -5,12 +5,12 @@ export const runtime = "edge";
 
 export async function POST(req: Request) {
   try {
-    const { amount } = (await req.json()) as CheckoutApiRequest;
+    const { amount, currency } = (await req.json()) as CheckoutApiRequest;
 
     const res = await fetch("https://api.dashcruisedev.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount }),
+      body: JSON.stringify({ amount, currency }),
     });
   
     if (!res.ok) {

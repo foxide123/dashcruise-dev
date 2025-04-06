@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import MeetingSchedule from "./MeetingSchedule";
 
 export default function MeetingScheduleSection({
@@ -7,6 +8,9 @@ export default function MeetingScheduleSection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
+
+  const meetingData = useTranslations("meeting");
+
   return (
     <div className="bg-white w-screen flex items-center justify-center">
       <div
@@ -15,17 +19,16 @@ export default function MeetingScheduleSection({
         {/* Header with description */}
         <div className="flex flex-col items-center justify-centertext-center text-center">
           <h1 className="text-5xl font-medium tracking-tight">
-            Free Website Consultation
+            {meetingData("header")}
           </h1>
           <h3 className="lg:w-[610px] mt-4 leading-7 text-base font-normal text-gray-500">
-            Book a 15-minute appointment to discuss your requirements, goals,
-            and how we can bring your vision to life.
+            {meetingData("description")}
           </h3>
         </div>
         {/* Schedule a meeting with us div above the calendar */}
         <div className="flex flex-row justify-between items-center mt-13 w-full py-8 px-12 bg-carrot-500 mb-8 rounded-lg">
           <p className="text-white text-2xl font-bold">
-            Schedule a Meeting with Us to Discuss the Details
+            {meetingData("cta")}
           </p>
           {/* Icons */}
           <div className="flex flex-row ">

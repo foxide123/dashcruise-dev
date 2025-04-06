@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import QAComponent from "./QAComponent";
 
 export default function QASection({
@@ -7,6 +8,9 @@ export default function QASection({
   lg_screen_width: string;
   default_screen_width: string;
 }) {
+
+  const qaData = useTranslations("qa");
+  
   return (
     <div className="bg-white caret-transparent flex justify-center w-screen">
       <div
@@ -14,10 +18,10 @@ export default function QASection({
       >
         <div className="text-center">
           <h3 className="text-xl font-medium text-carrot-500">
-            Got Questions? We&apos;ve Got Answers!
+            {qaData("sectionHighlight")}
           </h3>
           <h1 className=" font-medium text-5xl leading-15 tracking-tight">
-            Frequently Asked Questions
+            {qaData("header")}
           </h1>
         </div>
 

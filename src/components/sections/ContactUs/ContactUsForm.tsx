@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { handleFormSubmition } from "@/app/actions";
 import PopupModal from "@/components/modals/PopupModal";
+import { useTranslations } from "next-intl";
 
 export default function ContactUsForm({
   padding,
@@ -18,6 +19,9 @@ export default function ContactUsForm({
     email: "",
     message: "",
   });
+
+  const contactFormData = useTranslations("contactForm");
+
   return (
     <div className={`lg:w-[747px] ${marginTop} rounded-lg`}>
       <form
@@ -50,7 +54,7 @@ export default function ContactUsForm({
             setFormValues({ ...formValues, name: e.target.value })
           }
           required
-          placeholder="Name"
+          placeholder={contactFormData("name")}
           className="border-1 p-5 outline-none rounded-md"
         />
         <input
@@ -62,7 +66,7 @@ export default function ContactUsForm({
           onChange={(e) =>
             setFormValues({ ...formValues, email: e.target.value })
           }
-          placeholder="Email"
+          placeholder={contactFormData("email")}
           className="border-1 mt-5 p-5 outline-none rounded-md"
         />
         <textarea
@@ -72,14 +76,14 @@ export default function ContactUsForm({
           onChange={(e) =>
             setFormValues({ ...formValues, message: e.target.value })
           }
-          placeholder="Message"
+          placeholder={contactFormData("message")}
           className="border-1 mt-5 p-5 h-50 outline-none rounded-md"
         />
         <button
           type="submit"
           className="w-[215px] cursor-pointer text-base font-bold leading-6 rounded-4xl bg-carrot-500 text-white mt-5 p-5"
         >
-          {pending ? "Sending Message..." : "Send Message"}
+          {pending ? `${contactFormData("sending")}` : `${contactFormData("send")}`}
         </button>
         {showPopup && <PopupModal onClose={() => setShowPopup(false)} />}
       </form>

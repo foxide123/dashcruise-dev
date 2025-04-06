@@ -1,5 +1,7 @@
 import ContactUsForm from "@/components/sections/ContactUs/ContactUsForm";
 
+export const runtime = 'edge';
+
 export default function Contact() {
   const lg_screen_width = "lg:w-[75vw]";
   const default_screen_width = "w-[85vw]";

@@ -1,13 +1,14 @@
 import CheckIcon from "@/components/icons/CheckIcon";
 import SubscribeButton from "@/components/subscribe/SubscribeButton";
 import Image from "next/image";
+import { cookies } from "next/headers";
 
 type PricingFeatureProp = {
   featureHighlight: string;
   featureDescription: string;
 };
 
-export default function PricingPlan({
+export async function PricingPlan({
   planName,
   planPrice,
   planDescription,
@@ -19,13 +20,18 @@ export default function PricingPlan({
 }: {
   planName: string;
   planPrice: string;
-  planDescription: string[];
+  planDescription: string;
   additionalPagePrice: string | null;
   bgColor: string;
   textPrimaryColor: string;
   textSecondaryColor: string;
   features: PricingFeatureProp[];
 }) {
+  const cookieStore = await cookies();
+  const currency = cookieStore.get("currency")?.value || "usd";
+
+  const priceSymbol = currency === "usd" ? "$" : "€";
+
   const listItems = features.map((feature, index) => (
     <li key={index} className="flex text-lg mb-2 items-start">
       <CheckIcon color={`text-${textPrimaryColor}`} marginTop="1" />
@@ -38,15 +44,6 @@ export default function PricingPlan({
         </span>
       </span>
     </li>
-  ));
-
-  const formattedPlanDescription = planDescription.map((line, index) => (
-    <p
-      key={index}
-      className={`text-2xl mt-5 mb-2 px-2 text-${textPrimaryColor} ${index === 0 ? "mb-[-10px]" : ""}`}
-    >
-      {line}
-    </p>
   ));
 
   return (
@@ -76,7 +73,9 @@ export default function PricingPlan({
             <div>
               {" "}
               <span>
-                <span className="font-medium text-xl align-top">€&thinsp;</span>
+                <span className="font-medium text-xl align-top">
+                  {priceSymbol}&thinsp;
+                </span>
                 <span className="text-3xl font-bold">{planPrice}</span>
               </span>
               <span className=" font-medium">&thinsp;/ month</span>
@@ -85,7 +84,11 @@ export default function PricingPlan({
         </div>
         {/* Plan Description */}
         <div className="md:text-start text-center">
-        {formattedPlanDescription}
+          <p
+            className={`text-2xl mt-5 mb-2 px-2 text-${textPrimaryColor} "mb-[-10px]"`}
+          >
+            {planDescription}
+          </p>
         </div>
       </div>
 
@@ -95,13 +98,19 @@ export default function PricingPlan({
         className={` ${additionalPagePrice ? "block" : "hidden"} border-${textPrimaryColor} text-${textPrimaryColor} border-y py-5 mb-5 text-center`}
       >
         <h2 className="font-semibold">Need More Pages?</h2>
-        <span className="font-medium text-xl align-top">€&thinsp;</span>
+        <span className="font-medium text-xl align-top">
+          {priceSymbol}&thinsp;
+        </span>
         <span className="text-3xl font-bold">
           {additionalPagePrice} / month{" "}
         </span>
         <p className="inline-block">per additional page</p>
       </div>
-      <SubscribeButton customAmount={planPrice} />
+      <SubscribeButton
+        customAmount={planPrice}
+        text="Subscribe"
+        currency={currency}
+      />
     </div>
   );
 }

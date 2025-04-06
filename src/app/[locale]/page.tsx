@@ -7,7 +7,18 @@ import PricingSection from "@/components/sections/Pricing";
 import MeetingScheduleSection from "@/components/sections/MeetingSchedule";
 import QASection from "@/components/sections/QA";
 
-export default function Home() {
+import { getMessages, setRequestLocale } from "next-intl/server";
+
+export const runtime = 'edge';
+
+export default async function Home({params}: {params: Promise<{locale:string}>}) {
+
+  const awaitedParams = await params;
+  const locale = awaitedParams.locale;
+  setRequestLocale(locale);
+  const messages = await getMessages();
+  const pricingPlans = messages.pricingPlan;
+
   const lg_screen_width = "lg:w-[75vw]";
   const default_screen_width = "w-[85vw]";
   return (
@@ -35,6 +46,7 @@ export default function Home() {
         default_screen_width={default_screen_width}
       />
       <PricingSection
+        pricingPlans={pricingPlans}
         lg_screen_width={lg_screen_width}
         default_screen_width={default_screen_width}
       />
