@@ -22,7 +22,7 @@ export default async function Blog({
   return (
     <div className="caret-transparent w-screen py-20 lg:py-40 min-h-[100vh]">
       <div
-        className={`border-2 border-green-500 ${lg_screen_width} ${default_screen_width} container mx-auto flex flex-col gap-14`}
+        className={`${lg_screen_width} ${default_screen_width} container mx-auto flex flex-col gap-14`}
       >
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {postPreviews.map((post: PostParams, index:number) => {

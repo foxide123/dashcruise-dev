@@ -1,5 +1,3 @@
-import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
-
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
@@ -19,10 +17,6 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256]
   },
 };
-
-if(process.env.NODE_ENV === 'development') {
-  await setupDevPlatform();
-}
 
 export default withNextIntl(nextConfig);
 
