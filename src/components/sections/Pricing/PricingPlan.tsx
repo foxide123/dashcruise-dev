@@ -29,6 +29,7 @@ export async function PricingPlan({
 }) {
   const cookieStore = await cookies();
   const currency = cookieStore.get("currency")?.value || "usd";
+  const language = cookieStore.get("language")?.value || "en";
 
   const priceSymbol = currency === "usd" ? "$" : "€";
 
@@ -110,6 +111,7 @@ export async function PricingPlan({
         customAmount={planPrice}
         text="Subscribe"
         currency={currency}
+        language={language}
       />
     </div>
   );

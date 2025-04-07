@@ -7,11 +7,11 @@ import {
 
 export function AlertBox({message} : {message: string}){
     return (
-        <Alert variant="destructive">
+        <Alert variant="destructive" className="mt-4">
             <AlertCircle className="w-4 h-4"/>
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
-                ${message}
+                {message}
             </AlertDescription>
         </Alert>
     )

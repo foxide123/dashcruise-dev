@@ -1,12 +1,5 @@
 {/* Checkout Api */}
 
-
-
-export type CheckoutApiRequest = {
-    amount: number;
-    currency: string;
-}
-
 export type CheckoutApiResponse = {
     sessionId: string;
 }
