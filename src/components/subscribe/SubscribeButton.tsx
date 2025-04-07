@@ -34,7 +34,7 @@ SubscribeButton({
       const response = await fetch("/api/checkout_sessions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: customAmount, currency: currency, language }),
+        body: JSON.stringify({ amount: customAmount, currency: currency, language: language }),
       });
 
       const data = (await response.json()) as CheckoutApiResponse;
