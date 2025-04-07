@@ -49,6 +49,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ sessionId: session.id });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "Stripe session creation failed" },
       { status: 500 }
