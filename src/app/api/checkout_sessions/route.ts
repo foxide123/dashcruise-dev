@@ -1,16 +1,16 @@
+"use server";
+
 import { NextResponse } from "next/server";
 import { CheckoutApiRequest, CheckoutApiResponse } from "@/types/api_types";
 
-export const runtime = "edge";
-
 export async function POST(req: Request) {
   try {
-    const { amount, currency } = (await req.json()) as CheckoutApiRequest;
+    const { amount, currency, language } = (await req.json()) as CheckoutApiRequest;
 
     const res = await fetch("https://api.dashcruisedev.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount, currency }),
+      body: JSON.stringify({ amount, currency, language }),
     });
   
     if (!res.ok) {

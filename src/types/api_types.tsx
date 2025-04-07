@@ -5,6 +5,7 @@
 export type CheckoutApiRequest = {
     amount: number;
     currency: string;
+    language: string;
 }
 
 export type CheckoutApiResponse = {
